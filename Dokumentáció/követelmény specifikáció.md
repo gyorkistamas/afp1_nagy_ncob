@@ -23,6 +23,8 @@ Az adminisztrátornál is ugyanúgy megtalálható az adatlap, de neki továbbá
 
 ## 4. Jelenlegi üzleti folyamatok modellje
 
+Jelenlegi helyzet szerint, ügyfelünk még nem rendelkezik a mi elképzeléseinkhez hasonló, tájékozottságot vizsgáló kvízekkel Gaming téma terén és minél hamarabb szeretne hozzájutni a kész termékhez. Elvárásai között ott van, hogy legyen egy mód arra, hogy ő maga is tudja később bővíteni a feladványtárat. Továbbá legyen funkció arra is, hogy meg lehessen tekinteni a kvízek végén, hogy pl.: mennyi pontot szereztünk, vagy, hogy mennyire voltunk gyorsak, a lényeg az legyen, hogy valamilyen szinten mérjük és tároljuk el az egyes játékosok teljesítményeit/pontjait.
+Illetve a feladatok ne legyenek túl bonyolultak, te túl egyszerűek sem. Valahogy keltsék fel az érdeklődést az arra tévedőkben; lehessen könnyedén kiigazodni az oldal felületén, könnyen kezelhető és hozzáférhető legyen.
 
 
 ## 5. Igényelt üzleti folyamatok modellje
@@ -46,6 +48,6 @@ Az adminisztrátornál is ugyanúgy megtalálható az adatlap, de neki továbbá
 
 - (Weboldalra) Látogató: A weblap tartalmának olyan fogyasztója, aki nem rendelkezik felhasználói fiókkal. Hozzáférési lehetőségei kötöttek, de azért előfordulhatnak számár is elérhető funkciók.
 
-- Quiz/Kvíz/Feladvány: Szellemi, tudást felmérő játék. A mi oldalunk esetében jelenetekből kiragadaott képek, amik alapján meg kell állapítani forrást, amiből származhat a kép.
+- Quiz/Kvíz/Feladvány: Szellemi, tudást felmérő játék. A mi oldalunk esetében jelenetekből kiragadaott képek, amik alapján meg kell állapítani a forrást, amiből származhat a kép.
 
 - IP (Intellectual Property): Szellemi Tulajdon/Alkotás. Pl.: regény, vers, eposz, dal, zene, festmény, rajz, videó, kép, film, videójáték, valamiféle találmány.
