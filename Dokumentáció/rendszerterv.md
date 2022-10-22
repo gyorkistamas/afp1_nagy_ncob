@@ -36,19 +36,19 @@
 
 ## 4. Követelmények
 
-### Funkcionális követelmények
+### 4.1 Funkcionális követelmények
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
 | K1 | ... | ... |
 
-### Nemfunkcionális követelmények
+### 4.2 Nemfunkcionális követelmények
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
 | K4 | ... | ... |
 
-### Támogatott eszközök
+### 4.3 Támogatott eszközök
 
 ## 5. Funkcionális terv
 
@@ -58,58 +58,30 @@
 
 ## 6. Fizikai környezet
 
-### Vásárolt softwarekomponensek és külső rendszerek
+### 6.1 Hardver topológia
 
-### Hardver topológia
-
-### Fizikai alrendszerek
-
-### Fejlesztő eszközök
+### 6.2 Fejlesztő eszközök
 
 
-## 8. Architekturális terv
+## 7. Architekturális terv
 
-### Webszerver
+### 7.1 Webszerver
 
-### Adatbázis rendszer
+### 7.2 Adatbázis rendszer
 
-### A program elérése, kezelése
+### 7.3 A program elérése, kezelése
 
-## 9. Adatbázis terv
+## 8. Adatbázis terv
 
-## 10. Implementációs terv
+## 9. Implementációs terv
 
-## 11. Tesztterv
-
-A tesztelések célja a rendszer és komponensei funkcionalitásának teljes vizsgálata,
-ellenőrzése a rendszer által megvalósított üzleti szolgáltatások verifikálása.
-A teszteléseket a fejlesztői csapat minden tagja elvégzi.
-Egy teszt eredményeit a tagok dokumentálják külön fájlokba.
-
-### Tesztesetek
-
- | Teszteset | Elvárt eredmény | 
- |-----------|-----------------| 
- | ... | ... |
-
-### A tesztelési jegyzőkönyv kitöltésére egy sablon:
-
-**Tesztelő:** Vezetéknév Keresztnév
-
-**Tesztelés dátuma:** Év.Hónap.Nap
-
-Tesztszám | Rövid leírás | Várt eredmény | Eredmény | Megjegyzés
-----------|--------------|---------------|----------|-----------
-például. Teszt #01 | Regisztráció | A felhasználó az adatok megadásával sikeresen regisztrálni tud  | A felhasználó sikeresen regisztrált | Nem találtam problémát.
-... | ... | ... | ... | ...
-
-## 12. Telepítési terv
+## 10. Telepítési terv
 
 Fizikai telepítési terv: 
 
 Szoftver telepítési terv: 
 
-## 13. Karbantartási terv
+## 11. Karbantartási terv
 
 Fontos ellenőrizni:
 ...
