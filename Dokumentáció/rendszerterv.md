@@ -1,7 +1,7 @@
 # Rendszerterv
 ## 1. A rendszer célja
 
-Egy olyan web alapú alkalmazás létrehozása Laravel keretrendszer segítségével, ahol a felhasználók időtöltés és új ismeretek szerzésének céljából egy olyan játékot játszhatnak, ahol egy képről kell eldönteni, hogy honnan származik. A regisztrált felhasználók statisztikát kapnak eredményeikről, illetve elérhető egy globális statisztika is. A weboldal adminisztrátorai képesek új feladványokat feltölteni a rendszerbe, illetve szükség szerűen törölni azokat. A felhasználók fiókot készíthetnek, ehhez jelszót, e-mail címet illetve felhasználónevet adnak meg, illetve profilképet is feltölthetnek. Az adminisztrátorok igény szerint törölhetik a szabályoknak nem megfelelő fiókokat, vagy előléptethetik őket adminisztrátorokká.
+Egy olyan web alapú alkalmazás létrehozása Laravel keretrendszer segítségével, ahol a felhasználók időtöltés és új ismeretek szerzésének céljából egy olyan játékot játszhatnak, ahol egy képről kell eldönteni, hogy honnan, miből származik. Lehet regisztráció nélkül és regisztrációval is játszani. A regisztrált felhasználók statisztikát kapnak eredményeikről, illetve elérhető egy globális statisztika is. A felhasználó fiók készítéséhez megadnak jelszót, e-mail címet, felhasználónevet, illetve profilképet is feltölthetnek, de ez opcionális. A weboldal adminisztrátorai képesek új feladványokat feltölteni a rendszerbe, illetve szükség szerűen törölni azokat. Az adminisztrátorok igény szerint törölhetik a szabályoknak nem megfelelő fiókokat, vagy előléptethetik őket adminisztrátorokká.
 
 ## 2. Projektterv
 
