@@ -9,8 +9,8 @@ PHP, HTML, CSS, JavaScript használatával, Laravel keretrendszerben webalkalmaz
 
 ### 2.1 Projektszerepkörök, felelőségek:
    * Scrum masters: Banyik Nándor, Matuch Richárd
-   * Product owner: 
-   * Üzleti szereplő:
+   * Product owner: Matuch Richárd
+   * Üzleti szereplő: Banyik Nándor
      
 ### 2.2 Projektmunkások és felelőségek:
    * Frontend: Györkis Tamás, Karácsony Balázs, Kovács Dávid
@@ -25,12 +25,17 @@ PHP, HTML, CSS, JavaScript használatával, Laravel keretrendszerben webalkalmaz
 | Funkcionális specifikáció | Megírás | 1 | 1 | 1 | 1 | 1 |
 | Rendszerterv | Megírás | 1 | 1 | 1 | 1 | 1 |
 | Program |Képernyőtervek elkészítése | 2 | 1 | 1 | 1 | 1 |
-|Program |Prototípus elkészítése | 3 | 8 | 8 | 8 | 8 |
-|Program |Alapfunkciók elkészítése | 3 | 8 | 8 | 8 | 8 |
-|Program |Tesztelés | 4 | 2 | 2 | 2 | 2 |
+| Program |Prototípus elkészítése | 3 | 10 | 10 | 10 | 10 |
+| Program |Alapfunkciók elkészítése | 3 | 10 | 10 | 10 | 10 |
+| Program |Tesztelés | 4 | 3 | 3 | 3 | 3 |
 
 ### 2.4 Mérföldkövek:
-   * Prototípus átadása
+- Feladatok elosztása
+- Dokumentáció elkészítése
+- Alfa teszt
+- Béta teszt
+- Prototípus átadása
+- Végleges program átadása
 
 ## 3. Üzleti folyamatok modellje
 
