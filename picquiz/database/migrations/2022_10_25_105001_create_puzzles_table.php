@@ -13,18 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('puzzles', function (Blueprint $table) {
             $table->id();
-            $table->string('username');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
             $table->timestamps();
-            $table->boolean('isAdmin')->default(False);
-            $table->boolean('isBanned')->default(False);
+            $table->string('picture');
+            $table->string('answer');
+            $table->unsignedBigInteger('user_added');
             $table->integer('numberOfGames');
             $table->integer('numberOfHits');
+            $table->foreign('user_added')->references('id')->on('users');
         });
     }
 
@@ -35,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('puzzles');
     }
 };
