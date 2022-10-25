@@ -67,10 +67,18 @@ Modern (pl.: Google Chrome, Firefox, Safari), vagy beépített webböngészővel
 
 ## 6. Fizikai környezet
 
+Laravel által szolgáltatott fejlesztői webszerver fejlesztés során, a kész projekt esetén tényleges webszerver.
+
 ### 6.1 Hardver topológia
 
-### 6.2 Fejlesztő eszközök
+- Szerver weboldal kiszolgáló funkciókkal és szerver adatbázis kiszolgálóval.
+- Vagy egy szerver webszerver és adatbázis szerver funkciókkal.
 
+### 6.2 Fejlesztő eszközök
+- Programozási nyelvek, leírónyelvek, keretrendszerek: Laravel, PHP, HTML, CSS, JavaScript, BootStrap
+- Adatbázis kezelő programok: PHPMyAdmin, MySql Workbench
+- Fejlesztői környezetek: Visual Studio Code, PHPStorm, Vim
+- Tesztelési környezet: Webböngésző programok (Pl.: Google Chrome, Firefox, Microsoft Edge), illetve ezek beépített fejlesztői eszközei.
 
 ## 7. Architekturális terv
 
