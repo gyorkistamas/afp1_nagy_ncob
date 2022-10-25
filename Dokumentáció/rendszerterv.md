@@ -36,6 +36,10 @@ PHP, HTML, CSS, JavaScript használatával, Laravel keretrendszerben webalkalmaz
 
 ### 3.1 Üzleti szereplők
 
+- Látogatók (Felhasználó fiókkal nem rendelkező szereplők)
+- Felhasználók
+- Adminisztrátorok
+
 ### 3.2 Üzleti folyamatok
 
 ## 4. Követelmények
@@ -53,6 +57,7 @@ PHP, HTML, CSS, JavaScript használatával, Laravel keretrendszerben webalkalmaz
 | K4 | ... | ... |
 
 ### 4.3 Támogatott eszközök
+Modern (pl.: Google Chrome, Firefox, Safari), vagy beépített webböngészővel, illetve interneteléréssel rendelkező eszközök összessége.
 
 ## 5. Funkcionális terv
 
