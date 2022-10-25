@@ -47,6 +47,8 @@ PHP, HTML, CSS, JavaScript használatával, Laravel keretrendszerben webalkalmaz
 
 ### 3.2 Üzleti folyamatok
 
+![Üzleti_folyamatok](Képek/uzleti_folyamatok.jpg)
+
 ## 4. Követelmények
 
 ### 4.1 Funkcionális követelmények
