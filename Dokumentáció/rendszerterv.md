@@ -84,13 +84,16 @@ Laravel által szolgáltatott fejlesztői webszerver fejlesztés során, a kész
 
 ### 7.1 Webszerver
 
+Apache webszerver, IIS webszerver, Laravel által nyújtott fejelsztői webszerver
+
 ### 7.2 Adatbázis rendszer
 
-### 7.3 A program elérése, kezelése
+MySql relációs adatbázis
 
 ## 8. Adatbázis terv
 
 ## 9. Implementációs terv
+A weboldal elékszítéséhez Laravel keretrendszert használunk. Az adatbázist Laravel-ben migrációkkal készítjük el. Az alkalmazás egyes elemei (nézetek, publikus fájlok, modellek, stb.) külön mappákban találhatóak. A dokumentáció, illetve a weboldalon megjelenő szövegektől eltekintve törekszünk az angol nyelv használatára. Szükség esetén JavaScript-et is alkalmazunk az egyes elemeknél.
 
 ## 10. Telepítési terv
 
