@@ -55,13 +55,22 @@ PHP, HTML, CSS, JavaScript használatával, Laravel keretrendszerben webalkalmaz
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
-| K1 | ... | ... |
+| K1 | Bejelentkezés | Bejelentkező felület felhasználók, adminisztrátorok számára |
+| K2 | Regisztráció | Regisztrációs felület látogatóknak |
+| K3 | Új játék indítása | Új játék indítására és lejátszására szolgáló oldal |
+| K4 | Saját profil megtekintése | Saját adatok és statisztikák megtekintése, személyes adatok szerkesztése |
+| K5 | Feladványok megtekintése | Adminisztrátorok számára feladványok listázása, azok törlése |
+| K6 | Új feladvány feltöltése | Adminisztrátorok számára új feladványok feltöltése |
+| K7 | Visszajelzés | Felhasználók számára visszajelzés írása, adminisztrátorok számára ezek megtekintése |
+| K8 | Felhasználók megtekintése | Adminisztrátorok számára felhasználók megtekintése, keresése, lehetőség a felhasználók kitiltására, adminisztrátorrá való előléptetésére |
 
 ### 4.2 Nemfunkcionális követelmények
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
-| K4 | ... | ... |
+| K9 | Jogosultság kezelés | Látogató, felhasználó és adminisztrátor megkülönböztetése |
+| K10 | Felhasználó kezelés | Felhasználói fiók létrehozása, adatok tárolása |
+| K11 | Modern felület | Mai kornak elvárt modern, könnyen navigálható felület |
 
 ### 4.3 Támogatott eszközök
 Modern (pl.: Google Chrome, Firefox, Safari), vagy beépített webböngészővel, illetve interneteléréssel rendelkező eszközök összessége.
