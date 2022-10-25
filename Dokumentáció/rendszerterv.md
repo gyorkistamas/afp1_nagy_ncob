@@ -78,8 +78,24 @@ Modern (pl.: Google Chrome, Firefox, Safari), vagy beépített webböngészővel
 ## 5. Funkcionális terv
 
 ### 5.1 Rendszerszereplők
+- Látogató
+  - Tud játékot indítani, de a statisztikája nem mentődik el.
+- Felhasználó
+   - Játékot indít, szerkeszti a profilját, visszajelzést hagy.
+- Adminisztrátor
+  - Rendelkezik a felhasználó jogaival, és új feladványt visz fel vagy töröl, felhasználókat tilt ki, vagy léptet adminisztrátorrá.
 
 ### 5.2 Menühierarchiák
+1. Főoldal
+2. Új játék indítása
+3. Profil megtekintése
+   *  Profil szerkesztése
+4. Feladványok kilistázása
+   * Új feladvány feltöltése
+5. Felhasználók kilistázása
+6. Bejelentkezés
+7. Regisztráció
+8. Kijelentkezés
 
 ## 6. Fizikai környezet
 
