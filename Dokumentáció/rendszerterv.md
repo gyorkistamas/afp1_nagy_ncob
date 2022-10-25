@@ -93,20 +93,13 @@ MySql relációs adatbázis
 ## 8. Adatbázis terv
 
 ## 9. Implementációs terv
-A weboldal elékszítéséhez Laravel keretrendszert használunk. Az adatbázist Laravel-ben migrációkkal készítjük el. Az alkalmazás egyes elemei (nézetek, publikus fájlok, modellek, stb.) külön mappákban találhatóak. A dokumentáció, illetve a weboldalon megjelenő szövegektől eltekintve törekszünk az angol nyelv használatára. Szükség esetén JavaScript-et is alkalmazunk az egyes elemeknél.
+A weboldal elkészítéséhez Laravel keretrendszert használunk. Az adatbázist Laravel-ben migrációkkal készítjük el. Az alkalmazás egyes elemei (nézetek, publikus fájlok, modellek, stb.) külön mappákban találhatóak. A dokumentáció, illetve a weboldalon megjelenő szövegektől eltekintve törekszünk az angol nyelv használatára. Szükség esetén JavaScript-et is alkalmazunk az egyes elemeknél.
 
 ## 10. Telepítési terv
 
-Fizikai telepítési terv: 
-
-Szoftver telepítési terv: 
+Az alkalmazás telepítéséhez szükséges egy webkiszolgáló. Ez Windows rendszeren lehet xampp (ami Apache szervert és MySql szervert foglal magába.), illetve linuxos rendszereken közvetlen lehet Apache és MySql szerver. Az alkalmazás fájljait be kell másolni a webszerver oldalak számára fent tartott mappájába, és megadni a .env fájlban a adatbázis szerver elérhetőségeit (Cím, felhasználó, jelszó, adatbázis). Ezeket a felhasználókat, adatbázisokat létre kell hozni az adatbázis szerveren is. Ezután migrálni kell az adatbázisba a táblákat, és azok tartalmait. Ezután az üzemeltető által választott címen elérhető a weboldal.
 
 ## 11. Karbantartási terv
 
-Fontos ellenőrizni:
-...
-
-Figyelembe kell venni a felhasználó által jött visszajelzést is a programmal kapcsolatban.
-Ha hibát talált, mielőbb orvosolni kell, lehet az:
-*	Működéssel kapcsolatos
-*	Kinézet, dizájnnal kapcsolatos
+- A projekt átadása után jelzett hibák (akár felhasználók, akár megrendelők által jelzett) javítása igényszerűen.
+- 6 havonta Laravel keretrendszer frissítése és egyes komponensek frissítése ezzel együtt.
