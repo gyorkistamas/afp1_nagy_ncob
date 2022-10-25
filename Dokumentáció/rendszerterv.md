@@ -123,6 +123,7 @@ Apache webszerver, IIS webszerver, Laravel által nyújtott fejelsztői webszerv
 MySql relációs adatbázis
 
 ## 8. Adatbázis terv
+![Adatbázis](Képek/adatbazis.png)
 
 ## 9. Implementációs terv
 A weboldal elkészítéséhez Laravel keretrendszert használunk. Az adatbázist Laravel-ben migrációkkal készítjük el. Az alkalmazás egyes elemei (nézetek, publikus fájlok, modellek, stb.) külön mappákban találhatóak. A dokumentáció, illetve a weboldalon megjelenő szövegektől eltekintve törekszünk az angol nyelv használatára. Szükség esetén JavaScript-et is alkalmazunk az egyes elemeknél.
