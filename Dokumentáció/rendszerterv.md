@@ -5,27 +5,29 @@ Egy olyan web alapú alkalmazás létrehozása Laravel keretrendszer segítség�
 
 ## 2. Projektterv
 
+PHP, HTML, CSS, JavaScript használatával, Laravel keretrendszerben webalkalmazás létrehozása.
+
 ### 2.1 Projektszerepkörök, felelőségek:
-   * Scrum masters:
+   * Scrum masters: Banyik Nándor, Matuch Richárd
    * Product owner: 
    * Üzleti szereplő:
      
 ### 2.2 Projektmunkások és felelőségek:
-   * Frontend:
-   * Backend:
-   * Tesztelés:
+   * Frontend: Györkis Tamás, Karácsony Balázs, Kovács Dávid
+   * Backend: Györkis Tamás, Karácsony Balázs, Kovács Dávid
+   * Tesztelés: Györkis Tamás, Karácsony Balázs, Kovács Dávid
      
 ### 2.3 Ütemterv:
 
-|Funkció                  | Feladat                                | Prioritás | Becslés (nap) | Aktuális becslés (nap) | Eltelt idő (nap) | Becsült idő (nap) |
-|-------------------------|----------------------------------------|-----------|---------------|------------------------|------------------|---------------------|
-|Követelmény specifikáció |Megírás                                 |         1 |             1 |                      1 |                1 |                   1 |             
-|Funkcionális specifikáció|Megírás                                 |         1 |             1 |                      1 |                1 |                   1 |
-|Rendszerterv             |Megírás                                 |         1 |             1 |                      1 |                1 |                   1 |
-|Program                  |Képernyőtervek elkészítése              |         2 |             1 |                      1 |                1 |                   1 |
-|Program                  |Prototípus elkészítése                  |         3 |             8 |                      8 |                8 |                   8 |
-|Program                  |Alapfunkciók elkészítése                |         3 |             8 |                      8 |                8 |                   8 |
-|Program                  |Tesztelés                               |         4 |             2 |                      2 |                2 |                   2 |
+| Funkció | Feladat | Prioritás | Becslés (nap) | Aktuális becslés (nap) | Eltelt idő (nap) | Becsült idő (nap) |
+|-----|--------|-------|------|-------------|------------|-----------------|
+| Követelmény specifikáció | Megírás | 1 | 1 | 1 | 1 | 1 |             
+| Funkcionális specifikáció | Megírás | 1 | 1 | 1 | 1 | 1 |
+| Rendszerterv | Megírás | 1 | 1 | 1 | 1 | 1 |
+| Program |Képernyőtervek elkészítése | 2 | 1 | 1 | 1 | 1 |
+|Program |Prototípus elkészítése | 3 | 8 | 8 | 8 | 8 |
+|Program |Alapfunkciók elkészítése | 3 | 8 | 8 | 8 | 8 |
+|Program |Tesztelés | 4 | 2 | 2 | 2 | 2 |
 
 ### 2.4 Mérföldkövek:
    * Prototípus átadása
