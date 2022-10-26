@@ -24,24 +24,17 @@ A projektre 3 hónap áll rendelkezésre.
 ![Image](Képek/uzleti_folyamatok.jpg)
 
 ## 5. Követelménylista
-
 | Id | Modul | Név | Leírás |
 | :---: | --- | --- | --- |
-| F1 | Bejelentkeztető | Bejelentkeztető | bejelentkezést végrehajtó kód |
-| F2 | Bejelentkeztető | Bejelentkezési lap | oldal amin keresztül a bejelentkezés történik |
-| F3 | Bejelentkeztető | Bejelentkezés ellenörző | felhasználó oldali bejelenkezási form ellenörző |
-| F4 | Regisztrációs | Regisztrálás kezelő | regisztrációt végrehajtó kód |
-| F5 | Regisztrációs | Regisztálási lap | oldal amin keresztül a regisztrálás történik |
-| F6 | Regisztrációs | Regisztálás ellenörző | felhasználó oldali adat ellenörző |
-| F7 | Feladvány | Feladvány lista | minden elérhető játék katalógusa amin keresztül a játékos választhat |
-| F8 | Feladvány | Feladvány | egy egy quiz játék saját oldala annal elérhető annak végig játszása |
-| F9 | Feladvány | Új Feladvány | feladvány hozzáadására szolgáló űrlap; csak adminoknak |
-| F10 | Felhasználó | Felhasználó | felhasználói profil; a tulajdonosnak és az adminoknak módosítható |
-| F11 | Felhasználó | Felhasználó lista | minden regisztrált felhasználó katalógusa |
-| F12 | Feladványaim | Feladványaim | egy felhasználó feladvány története lista formában |
-| f13 | Visszajelzés | Visszajelzés küldés | visszajelzést rögzítő kód |
-| f14 | Visszajelzés | Visszajelzés küldése lap | oldal amin keresztül a visszajelzés küldés történik |
-| f15 | Visszajelzés | Visszajelzés ellenörző | felhasználói oldali  visszajelzés form ellenörző |
+| K1 | Bejelentkezés | Bejelentkezési lap | Bejelentkező felület |
+| K2 | Regisztráció | Regisztrációs lap |Regisztrációs felület látogatóknak. |
+| K3 | Új játék indítása | *Új játék indítása* oldal | Új játék indítására és lejátszására szolgáló weblap |
+| K4 | Saját profil megtekintése | *Profilom* oldal | Saját adatok megtekintése, szerkesztése, statisztikák megtekintése. |
+| K5 | Feladványok megtekintése | *Feladványaim* lap | Feladványok kilistázása, törlése adminisztrátorok számára |
+| K6 | Új feladvány feltöltése | *Feladvány létrehozása/hozzáadása* oldal | Új feladványok hozzáadása. Csak az adminisztrátor férhessen hozzá! |
+| K7 | Visszajelzés | *Visszajelzés küldése* lap | Felhasználók számára visszajelzés írása. |
+| K8 | Felhasználók megtekintése | *Felhasználók kilistázása* lap | Felhasználók kezelése adminisztrátorként. |
+
 
 ## 6. Használati esetek
 
@@ -74,3 +67,18 @@ A projektre 3 hónap áll rendelkezésre.
 | I16 | N/A | F7 |
 
 ## 11 Fogalomszótár
++ **profil**: az oldalon való személyazonosság hitelesítéshez szükséges adat halmaz.
+    * részei:
+        - felhasználó név
+        - email cím
+        - jelszó
+        - jogkör
+		- elérhetőség (bannolva van-e?)
+		- előző játékok
++ **látogató**: olyan fogyasztó aki nem rendelkezik felhasználói fiókkal.
++ **jogkör**: egy felhasználható álltal végre hajtható műveletek halmaza.
+    * fajtái:
+        - látogatói: játék
+        - felhasználói: játék (rögzítettve); értékelés írás
+        - moderátori: felhasználó; feladvány hozzáadás; felhasználók módosítása; hozzáféres az értékelésekhez
++ **IP**: "Intellectual Property"; Szellemi Tulajdon
