@@ -44,8 +44,8 @@ Az adminisztrátornál is ugyanúgy megtalálható az adatlap, de neki továbbá
 
 ## 7. Fogalomtár
 
-(Weboldalra) Látogató: A weblap tartalmának olyan fogyasztója, aki nem rendelkezik felhasználói fiókkal. Hozzáférési lehetőségei kötöttek, de azért előfordulhatnak számár is elérhető funkciók.
+- (Weboldalra) Látogató: A weblap tartalmának olyan fogyasztója, aki nem rendelkezik felhasználói fiókkal. Hozzáférési lehetőségei kötöttek, de azért előfordulhatnak számár is elérhető funkciók.
 
-Quiz/Kvíz/Feladvány: Szellemi, tudást felmérő játék. A mi oldalunk esetében jelenetekből kiragadaott képek, amik alapján meg kell állapítani forrást, amiből származhat a kép.
+- Quiz/Kvíz/Feladvány: Szellemi, tudást felmérő játék. A mi oldalunk esetében jelenetekből kiragadaott képek, amik alapján meg kell állapítani forrást, amiből származhat a kép.
 
-IP (Intellectual Property): Szellemi Tulajdon/Alkotás. Pl.: regény, vers, eposz, dal, zene, festmény, rajz, videó, kép, film, videójáték, valamiféle találmány.
+- IP (Intellectual Property): Szellemi Tulajdon/Alkotás. Pl.: regény, vers, eposz, dal, zene, festmény, rajz, videó, kép, film, videójáték, valamiféle találmány.
