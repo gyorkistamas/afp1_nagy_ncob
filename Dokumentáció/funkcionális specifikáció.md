@@ -1,5 +1,9 @@
 # Funkcionális specifikáció
 ## 1. Jelenlegi helyzet leírása
+Ügyfelünk videójáték mediával foglalkozik. Több az iparról szóló hírportálért és blogért felelős.
+Több médiumon gyűjt statisztikát a játékosok véleményeiről és tudásáról. Oldalain ösztönzi a felhasználói vélemény nyílvánítást. Rendelkezik autómatizált kör email kiküldő és feldolgozó rendszerrel. Minden jelentős gamer rendezvényen állít standot és alkalmaz ügynököket személyes vélemény kikérésre. Ezeket az adatokat piacfelmérési számdékkal halmozza.
+Bár módszerik nem hatástalanok, de lazán strukturáltak és közel nem olyan hatékonyak mint egy jól reklámozható centrelalizált felület.
+Ezért bizott meg minket egy gaming témájú kvíz játék elkészítésével.
 
 ## 2. Vágyállomrendszer leírása
 Egy webes felület ami edális a felhasználói számára videójátékos ismeretek tovább fejlesztésére.
