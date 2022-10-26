@@ -23,6 +23,8 @@ Az adminisztrátornál is ugyanúgy megtalálható az adatlap, de neki továbbá
 
 ## 4. Jelenlegi üzleti folyamatok modellje
 
+
+
 ## 5. Igényelt üzleti folyamatok modellje
 
 ![Image](Képek/uzleti_folyamatok.jpg)
@@ -39,3 +41,11 @@ Az adminisztrátornál is ugyanúgy megtalálható az adatlap, de neki továbbá
 | K6 | Új feladvány feltöltése | *Feladvány létrehozása/hozzáadása* oldal | Új feladványok hozzáadása. Csak az adminisztrátor férhessen hozzá! |
 | K7 | Visszajelzés | *Visszajelzés küldése* lap | Felhasználók számára visszajelzés írása. |
 | K8 | Felhasználók megtekintése | *Felhasználók kilistázása* lap | Felhasználók kezelése adminisztrátorként. |
+
+## 7. Fogalomtár
+
+(Weboldalra) Látogató: A weblap tartalmának olyan fogyasztója, aki nem rendelkezik felhasználói fiókkal. Hozzáférési lehetőségei kötöttek, de azért előfordulhatnak számár is elérhető funkciók.
+
+Quiz/Kvíz/Feladvány: Szellemi, tudást felmérő játék. A mi oldalunk esetében jelenetekből kiragadaott képek, amikről meg kell állapítani forrást.
+
+IP (Intellectual Property): Szellemi Tulajdon/Alkotás. Pl.: regény, vers, eposz, dal, zene, festmény, rajz, videó, kép, film, videójáték, valamiféle találmány.
