@@ -46,7 +46,7 @@ Illetve a feladatok ne legyenek túl bonyolultak, te túl egyszerűek sem. Valah
 
 ## 7. Fogalomtár
 
-- (Weboldalra) Látogató: A weblap tartalmának olyan fogyasztója, aki nem rendelkezik felhasználói fiókkal. Hozzáférési lehetőségei kötöttek, de azért előfordulhatnak számár is elérhető funkciók.
+- (Weboldalra) Látogató: A weblap tartalmának olyan fogyasztója, aki nem rendelkezik felhasználói fiókkal. Hozzáférési lehetőségei kötöttek, de azért előfordulhatnak számára is elérhető funkciók.
 
 - Quiz/Kvíz/Feladvány: Szellemi, tudást felmérő játék. A mi oldalunk esetében jelenetekből kiragadaott képek, amik alapján meg kell állapítani a forrást, amiből származhat a kép.
 
