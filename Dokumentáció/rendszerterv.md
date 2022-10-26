@@ -53,16 +53,23 @@ PHP, HTML, CSS, JavaScript használatával, Laravel keretrendszerben webalkalmaz
 
 ### 4.1 Funkcionális követelmények
 
-| ID | Megnevezés | Leírás |
-| --- | --- | --- |
-| K1 | Bejelentkezés | Bejelentkező felület felhasználók, adminisztrátorok számára |
-| K2 | Regisztráció | Regisztrációs felület látogatóknak |
-| K3 | Új játék indítása | Új játék indítására és lejátszására szolgáló oldal |
-| K4 | Saját profil megtekintése | Saját adatok és statisztikák megtekintése, személyes adatok szerkesztése |
-| K5 | Feladványok megtekintése | Adminisztrátorok számára feladványok listázása, azok törlése |
-| K6 | Új feladvány feltöltése | Adminisztrátorok számára új feladványok feltöltése |
-| K7 | Visszajelzés | Felhasználók számára visszajelzés írása, adminisztrátorok számára ezek megtekintése |
-| K8 | Felhasználók megtekintése | Adminisztrátorok számára felhasználók megtekintése, keresése, lehetőség a felhasználók kitiltására, adminisztrátorrá való előléptetésére |
+| Id | Modul | Név | Leírás |
+| :---: | --- | --- | --- |
+| F1 | Bejelentkeztető | Bejelentkeztető | bejelentkezést végrehajtó kód |
+| F2 | Bejelentkeztető | Bejelentkezési lap | oldal amin keresztül a bejelentkezés történik |
+| F3 | Bejelentkeztető | Bejelentkezés ellenörző | felhasználó oldali bejelenkezási form ellenörző |
+| F4 | Regisztrációs | Regisztrálás kezelő | regisztrációt végrehajtó kód |
+| F5 | Regisztrációs | Regisztálási lap | oldal amin keresztül a regisztrálás történik |
+| F6 | Regisztrációs | Regisztálás ellenörző | felhasználó oldali adat ellenörző |
+| F7 | Feladvány | Feladvány lista | minden elérhető játék katalógusa amin keresztül a játékos választhat |
+| F8 | Feladvány | Feladvány | egy egy quiz játék saját oldala annal elérhető annak végig játszása |
+| F9 | Feladvány | Új Feladvány | feladvány hozzáadására szolgáló űrlap; csak adminoknak |
+| F10 | Felhasználó | Felhasználó | felhasználói profil; a tulajdonosnak és az adminoknak módosítható |
+| F11 | Felhasználó | Felhasználó lista | minden regisztrált felhasználó katalógusa |
+| F12 | Feladványaim | Feladványaim | egy felhasználó feladvány története lista formában |
+| f13 | Visszajelzés | Visszajelzés küldés | visszajelzést rögzítő kód |
+| f14 | Visszajelzés | Visszajelzés küldése lap | oldal amin keresztül a visszajelzés küldés történik |
+| f15 | Visszajelzés | Visszajelzés ellenörző | felhasználói oldali  visszajelzés form ellenörző |
 
 ### 4.2 Nemfunkcionális követelmények
 

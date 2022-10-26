@@ -27,7 +27,21 @@ A projektre 3 hónap áll rendelkezésre.
 
 | Id | Modul | Név | Leírás |
 | :---: | --- | --- | --- |
-| K1 | ...| ... | ... |
+| F1 | Bejelentkeztető | Bejelentkeztető | bejelentkezést végrehajtó kód |
+| F2 | Bejelentkeztető | Bejelentkezési lap | oldal amin keresztül a bejelentkezés történik |
+| F3 | Bejelentkeztető | Bejelentkezés ellenörző | felhasználó oldali bejelenkezási form ellenörző |
+| F4 | Regisztrációs | Regisztrálás kezelő | regisztrációt végrehajtó kód |
+| F5 | Regisztrációs | Regisztálási lap | oldal amin keresztül a regisztrálás történik |
+| F6 | Regisztrációs | Regisztálás ellenörző | felhasználó oldali adat ellenörző |
+| F7 | Feladvány | Feladvány lista | minden elérhető játék katalógusa amin keresztül a játékos választhat |
+| F8 | Feladvány | Feladvány | egy egy quiz játék saját oldala annal elérhető annak végig játszása |
+| F9 | Feladvány | Új Feladvány | feladvány hozzáadására szolgáló űrlap; csak adminoknak |
+| F10 | Felhasználó | Felhasználó | felhasználói profil; a tulajdonosnak és az adminoknak módosítható |
+| F11 | Felhasználó | Felhasználó lista | minden regisztrált felhasználó katalógusa |
+| F12 | Feladványaim | Feladványaim | egy felhasználó feladvány története lista formában |
+| f13 | Visszajelzés | Visszajelzés küldés | visszajelzést rögzítő kód |
+| f14 | Visszajelzés | Visszajelzés küldése lap | oldal amin keresztül a visszajelzés küldés történik |
+| f15 | Visszajelzés | Visszajelzés ellenörző | felhasználói oldali  visszajelzés form ellenörző |
 
 ## 6. Használati esetek
 
@@ -43,6 +57,20 @@ A projektre 3 hónap áll rendelkezésre.
 
 | Id | Követelmény | Funkció |
 | :---: | --- | --- |
-| K4 | ... | ... |
+| I1 |  K1 | F1 |
+| I2 |  K1 | F2 |
+| I3 |  K1 | F3 |
+| I4 |  K2 | F4 |
+| I5 |  K2 | F5 |
+| I6 |  K2 | F6 |
+| I7 |  K3 | F8 |
+| I8 |  K4 | F10 |
+| I9 |  K5 | F12 |
+| I10 | K6 | F9 |
+| I12 | K7 | F13 |
+| I14 | K7 | F14 |
+| I15 | K7 | F15 |
+| I15 | K8 | F11 |
+| I16 | N/A | F7 |
 
 ## 11 Fogalomszótár
