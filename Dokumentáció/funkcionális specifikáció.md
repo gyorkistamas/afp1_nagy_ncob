@@ -1,16 +1,16 @@
 # Funkcionális specifikáció
 ## 1. Jelenlegi helyzet leírása
-Ügyfelünk videójáték mediával foglalkozik. Több az iparról szóló hírportálért és blogért felelős.
-Több médiumon gyűjt statisztikát a játékosok véleményeiről és tudásáról. Oldalain ösztönzi a felhasználói vélemény nyílvánítást. Rendelkezik autómatizált kör email kiküldő és feldolgozó rendszerrel. Minden jelentős gamer rendezvényen állít standot és alkalmaz ügynököket személyes vélemény kikérésre. Ezeket az adatokat piacfelmérési számdékkal halmozza.
-Bár módszerik nem hatástalanok, de lazán strukturáltak és közel nem olyan hatékonyak mint egy jól reklámozható centrelalizált felület.
-Ezért bizott meg minket egy gaming témájú kvíz játék elkészítésével.
+Ügyfelünk videójáték médiával foglalkozik. Több az iparról szóló hírportálért és blogért felelős.
+Több médiumon gyűjt statisztikát a játékosok véleményeiről és tudásáról. Oldalain ösztönzi a felhasználói vélemény nyilvánítást. Rendelkezik automatizált kör email kiküldő és feldolgozó rendszerrel. Minden jelentős gamer rendezvényen állít standot és alkalmaz ügynököket személyes vélemény kikérésre. Ezeket az adatokat piacfelmérési szándékkal halmozza.
+Bár módszereik nem hatástalanok, de lazán strukturáltak és közel nem olyan hatékonyak mint egy jól reklámozható centralizált felület.
+Ezért bízott meg minket egy gaming témájú kvíz játék elkészítésével.
 
 ## 2. Vágyállomrendszer leírása
-Egy webes felület ami edális a felhasználói számára videójátékos ismeretek tovább fejlesztésére.
+Egy webes felület ami idális a felhasználói számára videójátékos ismereteik tovább fejlesztésére.
 Az oldalon grafikus kvízek kitöltésére nyílik lehetőség, melyekben a videójátékok képről való felismerése a cél. A játékos N mennyiségű kép-játéknév kombinációból álló _feladványt_ kap, ahol számára csak a kép látható ameddig nem helyez le egy tippet a játék címéről, minek hatására a helyes válasz láthatóvá válik.
 Minden parti statisztikája a játék körülményeivel egyetemben rögzítésre kerül. Így pontos kép fog kialakulni minden felhasználó egyéni képpeségeiről és egy-egy _feladvány_ nehézségéről Ezekhez az információkhoz a _látogatók_ intuitív módon férhetnek hozzá.
-Egy számítógét és aktív internet kapcsolat birtokában bárki játszhat, a részvétel nem meghíváshoz vagy regesztrációhoz kötött. Viszont az utóbbira van lehetőség. Minden regisztrált felhasználó előzményeit külön kezeljük ezzel lehetőságet adva a pontos, személyreszabott adatelemzés nyújtására. Továbbá feliratkozás után a felhasználóknak lehetőságe nyílik visszajelzéseket írni az _adminoknak_.
-Az _adminok_ különleges hatáskörrel rendelkező felhasználók. Ők képesek bármely felhasználó és _feladvány_ módosítására és új feladványok hozzáadására. Számukra elérhető egy felhasználói vissza jelzés lista is amin kiemelve szerepelnek a még olvasatlanok.
+Egy számítógép és aktív internet kapcsolat birtokában bárki játszhat, a részvétel nem meghíváshoz vagy regisztrációhoz kötött. Viszont az utóbbira van lehetőség. Minden regisztrált felhasználó előzményeit külön kezeljük ezzel lehetőséget adva a pontos, személyre szabott adatelemzés nyújtására. Továbbá feliratkozás után a felhasználók képesek lesznek visszajelzéseket írni az _adminoknak_.
+Az _adminok_ különleges hatáskörrel rendelkező felhasználók. Ők tudnak módosítani bármely felhasználó és _feladvány_ adatain és új feladványokat hozzáadni. Számukra elérhető egy felhasználói visszajelzés lista is, amin kiemelve szerepelnek a még olvasatlan üzenetek.
 
 ## 3. Jelenlegi üzleti folyamatok modellje
 
