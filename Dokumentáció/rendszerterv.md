@@ -21,13 +21,13 @@ PHP, HTML, CSS, JavaScript használatával, Laravel keretrendszerben webalkalmaz
 
 | Funkció | Feladat | Prioritás | Becslés (nap) | Aktuális becslés (nap) | Eltelt idő (nap) | Becsült idő (nap) |
 |-----|--------|-------|------|-------------|------------|-----------------|
-| Követelmény specifikáció | Megírás | 1 | 1 | 1 | 1 | 1 |             
-| Funkcionális specifikáció | Megírás | 1 | 1 | 1 | 1 | 1 |
-| Rendszerterv | Megírás | 1 | 1 | 1 | 1 | 1 |
-| Program |Képernyőtervek elkészítése | 2 | 1 | 1 | 1 | 1 |
-| Program |Prototípus elkészítése | 3 | 10 | 10 | 10 | 10 |
-| Program |Alapfunkciók elkészítése | 3 | 10 | 10 | 10 | 10 |
-| Program |Tesztelés | 4 | 3 | 3 | 3 | 3 |
+| Követelmény specifikáció | Megírás | 1 | 1 | 1 | - | 1 |             
+| Funkcionális specifikáció | Megírás | 1 | 1 | 1 | - | 1 |
+| Rendszerterv | Megírás | 1 | 1 | 1 | - | 1 |
+| Program |Képernyőtervek elkészítése | 2 | 1 | 1 | - | 1 |
+| Program |Prototípus elkészítése | 3 | 10 | 10 | - | 10 |
+| Program |Alapfunkciók elkészítése | 3 | 10 | 10 | - | 10 |
+| Program |Tesztelés | 4 | 3 | 3 | - | 3 |
 
 ### 2.4 Mérföldkövek:
 - Feladatok elosztása
