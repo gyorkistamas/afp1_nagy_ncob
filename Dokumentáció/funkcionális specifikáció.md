@@ -13,8 +13,15 @@ Egy számítógép és aktív internet kapcsolat birtokában bárki játszhat, a
 Az _adminok_ különleges hatáskörrel rendelkező felhasználók. Ők tudnak módosítani bármely felhasználó és _feladvány_ adatain és új feladványokat hozzáadni. Számukra elérhető egy felhasználói visszajelzés lista is, amin kiemelve szerepelnek a még olvasatlan üzenetek.
 
 ## 3. Jelenlegi üzleti folyamatok modellje
+Az ügyfél megbízott minket egy videójáték felismerő kvíz oldal elkészítésével.
+A rendszer forrása az ügyfelet fogja illetni. Igényt képez annak további bővítési lehetőségével. Elvárás kód bázis könnyű újra fel használása, alapként használása.
+Működtetni nélkülünk fogják az oldalt. A cég programozói háttérel nem rendelkező személyeket tervez kinevezni karbantartási és moderálási pozíciókra. Tervezés és kivitelezéskor ez kulcs fontosságó szempont. Minden felmerülhető CRUD műveletre grafikus felületet kell biztosítanunk.
+Az oldal adatbányászási céllal jön létre, tehát egy szakszerű, normál formáknak eleget tevő adatbázis szükséges.
+A projektre 3 hónap áll rendelkezésre.
 
 ## 4. Igényelt üzleti folyamatok modellje
+
+![Image](Képek/uzleti_folyamatok.jpg)
 
 ## 5. Követelménylista
 
