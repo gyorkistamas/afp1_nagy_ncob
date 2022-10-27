@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+	<link rel="icon" href="favicon.png">
 	<link rel="stylesheet" type="text/css" href="css/navbar.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
@@ -31,12 +32,20 @@
 						<a href="#" class="nav-link navitem"><img
 								src="src/bemutatkozas.png">Új játék</a>
 					</li>
+
 					<li class="nav-item mt-2 mt-lg-0">
 						<a href="kapcsolat.html" class="nav-link navitem"><img src="src/kapcsolat.png">Kapcsolat</a>
 					</li>
 
 					<li class="nav-item mt-2 mt-lg-0">
+						<a href="kapcsolat.html" class="nav-link navitem"><img src="src/kapcsolat.png">Visszajelzés</a>
+					</li>
+
+					<li class="nav-item mt-2 mt-lg-0">
 						<a href="" class="nav-link navitem"><img src="src/kapcsolat.png">Regisztráció</a>
+					</li>
+					<li class="nav-item mt-2 mt-lg-0">
+						<a href="" class="nav-link navitem"><img src="src/kapcsolat.png">Bejelentkezés</a>
 					</li>
 
 				</ul>
