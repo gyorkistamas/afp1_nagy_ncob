@@ -59,6 +59,12 @@ A projektre 3 hónap áll rendelkezésre.
 ![képnév](gitlink ahol a kép van)
 
 ## 9. Forgatókönyvek
+1. Regisztráció
+![regisztrációs_forgatókönyv](Forgatókönyvek/regisztrációs_forgatókönyv.png)
+2. Bejelentkezés
+![bejelentkezési_forgatókönyv](Forgatókönyvek/bejelentkezési_forgatókönyv.png)
+3. Játék
+![bejelentkezési_forgatókönyv](Forgatókönyvek/játék_forgatókönyv.png)
 
 ## 10. Funkció - követelmény megfeleltetése
 
