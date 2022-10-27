@@ -66,7 +66,7 @@ A projektre 3 hónap áll rendelkezésre.
 3. Játék
 ![játék_forgatókönyv](Forgatókönyvek/játék_forgatókönyv.png)
 4. Kvíz hozzáadása
-![hozzáadás_forgatókönyv](Forgatókönyvek/játék_forgatókönyv.png)
+![hozzáadás_forgatókönyv](Forgatókönyvek/hozzáadás_forgatókönyv.png)
 
 ## 10. Funkció - követelmény megfeleltetése
 
