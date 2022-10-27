@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('mainpage');
 });
 
+//Route to register
 Route::get('/register', [UserController::class, 'create']);
