@@ -37,6 +37,11 @@ A projektre 3 hónap áll rendelkezésre.
 
 
 ## 6. Használati esetek
+1. Egy látogató az oldalra téved, hogy kis kisidőre szórakoztassa magát. Játszik egyet-kettőt majd kilép.
+2. Egy videójátékokban méllyen érdekelt személy szeretné felmérni ismereteinek minőséget.
+3. Egy látogató szeretne tudomást szerezni arról milyen videójátékokat nem ismer még, hogy ötletet kapjon arról mit lenne érdemes kipróbálnia.
+4. Egy moderátor meg akarja tudni mit gondolnak a felhasználók a kvízekről.
+5. Egy moderátor relevánsan akarja tartani az oldalt ezért új kvízt ad hozzá-
 
 ## 7. Megfeleltetés, hogyan fedik le a használati eseteket a követelményeket
 
