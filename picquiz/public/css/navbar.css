@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+body {
+	background-image: url(../src/background.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: 'Noto Sans', 'Times New Roman' !important;
+	color: white;
+}
+
+.navitem img {
+	border-right: 1px solid white;
+	margin-right: 6px;
+	padding-right: 3px;
+}
+
+
+.active {
+	background-color: white;
+	color: rgba(0, 0, 0, 0.7) !important;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in;
+}
+
+.navitem.active img {
+	filter: invert(100%);
+}
+
+.navitem {
+	color: white;
+	border: 1px solid white;
+	margin-right: 10px;
+	border-radius: 5px;
+}
+
+.navitem:hover {
+	background-color: white;
+	color: rgba(0, 0, 0, 0.7) !important;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in;
+}
+
+.navitem:hover img {
+	filter: invert(100%);
+}
+
+nav {
+	margin: 5px 20px 10px 20px;
+	padding: 7px !important;
+	border-radius: 10px;
+	transition-duration: 200ms;
+	transform-origin: top;
+	transition-timing-function: ease-in-out;
+}
+
+.isSticky {
+	margin-left: 0px;
+	margin-right: 0px;
+	border-radius: 0px;
+	transition-duration: 200ms;
+	transform-origin: top;
+	transition-timing-function: ease-in-out;
+}
