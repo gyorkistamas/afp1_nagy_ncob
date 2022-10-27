@@ -30,20 +30,16 @@
 					</li>
 					<li class="nav-item mt-2 mt-lg-0">
 						<a href="#" class="nav-link navitem"><img
-								src="src/bemutatkozas.png">Új játék</a>
+								src="images/newGameIcon.png">Új játék</a>
 					</li>
 
 					<li class="nav-item mt-2 mt-lg-0">
 						<a href="#" class="nav-link navitem"><img
-								src="src/bemutatkozas.png">Profil megtekintése</a>
+								src="images/viewProfileIcon.png">Profil megtekintése</a>
 					</li>
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="kapcsolat.html" class="nav-link navitem"><img src="src/kapcsolat.png">Kapcsolat</a>
-					</li>
-
-					<li class="nav-item mt-2 mt-lg-0">
-						<a href="kapcsolat.html" class="nav-link navitem"><img src="src/kapcsolat.png">Visszajelzés</a>
+						<a href="kapcsolat.html" class="nav-link navitem"><img src="images/feedbackIcon.png">Visszajelzés</a>
 					</li>
 
 				</ul>
@@ -51,10 +47,14 @@
 
 				<ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-end">
 					<li class="nav-item mt-2 mt-lg-0">
+<<<<<<< HEAD
 						<a href="/register" class="nav-link navitem"><img src="src/kapcsolat.png">Regisztráció</a>
+=======
+						<a href="" class="nav-link navitem"><img src="images/registerIcon.png">Regisztráció</a>
+>>>>>>> 9c2df03809a753e24e4da8bd0dbddc83a93ef7f0
 					</li>
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="" class="nav-link navitem"><img src="src/kapcsolat.png">Bejelentkezés</a>
+						<a href="" class="nav-link navitem"><img src="images/loginIcon.png">Bejelentkezés</a>
 					</li>
 				</ul>
 
