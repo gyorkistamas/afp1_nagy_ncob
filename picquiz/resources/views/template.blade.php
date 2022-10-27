@@ -47,11 +47,7 @@
 
 				<ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-end">
 					<li class="nav-item mt-2 mt-lg-0">
-<<<<<<< HEAD
-						<a href="/register" class="nav-link navitem"><img src="src/kapcsolat.png">Regisztráció</a>
-=======
-						<a href="" class="nav-link navitem"><img src="images/registerIcon.png">Regisztráció</a>
->>>>>>> 9c2df03809a753e24e4da8bd0dbddc83a93ef7f0
+						<a href="/register" class="nav-link navitem"><img src="images/registerIcon.png">Regisztráció</a>
 					</li>
 					<li class="nav-item mt-2 mt-lg-0">
 						<a href="" class="nav-link navitem"><img src="images/loginIcon.png">Bejelentkezés</a>
