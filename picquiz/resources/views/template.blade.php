@@ -34,6 +34,11 @@
 					</li>
 
 					<li class="nav-item mt-2 mt-lg-0">
+						<a href="#" class="nav-link navitem"><img
+								src="src/bemutatkozas.png">Profil megtekintése</a>
+					</li>
+
+					<li class="nav-item mt-2 mt-lg-0">
 						<a href="kapcsolat.html" class="nav-link navitem"><img src="src/kapcsolat.png">Kapcsolat</a>
 					</li>
 
@@ -41,14 +46,18 @@
 						<a href="kapcsolat.html" class="nav-link navitem"><img src="src/kapcsolat.png">Visszajelzés</a>
 					</li>
 
+				</ul>
+
+
+				<ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-end">
 					<li class="nav-item mt-2 mt-lg-0">
 						<a href="" class="nav-link navitem"><img src="src/kapcsolat.png">Regisztráció</a>
 					</li>
 					<li class="nav-item mt-2 mt-lg-0">
 						<a href="" class="nav-link navitem"><img src="src/kapcsolat.png">Bejelentkezés</a>
 					</li>
-
 				</ul>
+
 			</div>
 		</div>
 	</nav>
