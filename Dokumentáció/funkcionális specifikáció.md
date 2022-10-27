@@ -64,7 +64,9 @@ A projektre 3 hónap áll rendelkezésre.
 2. Bejelentkezés
 ![bejelentkezési_forgatókönyv](Forgatókönyvek/bejelentkezési_forgatókönyv.png)
 3. Játék
-![bejelentkezési_forgatókönyv](Forgatókönyvek/játék_forgatókönyv.png)
+![játék_forgatókönyv](Forgatókönyvek/játék_forgatókönyv.png)
+4. Kvíz hozzáadása
+![hozzáadás_forgatókönyv](Forgatókönyvek/játék_forgatókönyv.png)
 
 ## 10. Funkció - követelmény megfeleltetése
 
