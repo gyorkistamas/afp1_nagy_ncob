@@ -41,9 +41,18 @@ A projektre 3 hónap áll rendelkezésre.
 2. Egy videójátékokban méllyen érdekelt személy szeretné felmérni ismereteinek minőséget.
 3. Egy látogató szeretne tudomást szerezni arról milyen videójátékokat nem ismer még, hogy ötletet kapjon arról mit lenne érdemes kipróbálnia.
 4. Egy moderátor meg akarja tudni mit gondolnak a felhasználók a kvízekről.
-5. Egy moderátor relevánsan akarja tartani az oldalt ezért új kvízt ad hozzá-
+5. Egy moderátor relevánsan akarja tartani az oldalt ezért új kvízt ad hozzá
+6. Egy moderátor szerkesztene egy felhasználó fiókot (például mert problémás adatokat tartalmaz)
 
 ## 7. Megfeleltetés, hogyan fedik le a használati eseteket a követelményeket
+| Lefedett használati eset | Követelmény | Követelmény azonosító(k) |
+| :---: | :---: | :---: |
+| 1. | minden látogató játszhat | K3 |
+| 2. | regisztrált felhasználók áttekinthetik a statisztikáikat | K1, K2, K4 |
+| 3. | regisztrált felhasználók tudhatják mit oldottak már meg, újjakat kereshetnek | K1, K2, K5 |
+| 4. | moderátorok olvashatnak visszajelzéseket | K1, K2, K7 |
+| 5. | moderátorok új feladványokat tölthetnek fel | K1, K2, K6 |
+| 6. | moderátorok szerkeszthetnek felhasználói fiókokat | K1, K2, K8 |
 
 ## 8. Képernyőtervek
 
