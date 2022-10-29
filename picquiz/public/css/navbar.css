@@ -25,7 +25,7 @@
 
 .navitem:hover {
 	background-color: white;
-	color: rgba(0, 0, 0, 0.7) !important;
+	color: rgba(0, 0, 0, 0.7);
 	transition-duration: 300ms;
 	transition-timing-function: ease-in;
 }
@@ -47,6 +47,7 @@ nav {
 	margin-left: 0px;
 	margin-right: 0px;
 	border-radius: 0px;
+
 	transition-duration: 200ms;
 	transform-origin: top;
 	transition-timing-function: ease-in-out;
