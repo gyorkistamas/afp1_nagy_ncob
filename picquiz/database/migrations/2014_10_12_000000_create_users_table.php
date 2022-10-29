@@ -19,12 +19,13 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->string('profile_picture')->nullable();
             $table->rememberToken();
             $table->timestamps();
             $table->boolean('isAdmin')->default(False);
             $table->boolean('isBanned')->default(False);
-            $table->integer('numberOfGames');
-            $table->integer('numberOfHits');
+            $table->integer('numberOfGames')->default(0);
+            $table->integer('numberOfHits')->default(0);
         });
     }
 
