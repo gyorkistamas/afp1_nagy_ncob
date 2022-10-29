@@ -7,7 +7,7 @@ Ezért bízott meg minket egy gaming témájú kvíz játék elkészítésével.
 
 ## 2. Vágyálomrendszer leírása
 Egy webes felület ami idális a felhasználói számára videójátékos ismereteik tovább fejlesztésére.
-Az oldalon grafikus kvízek kitöltésére nyílik lehetőség, melyekben a videójátékok képről való felismerése a cél. A játékos N mennyiségű kép-játéknév kombinációból álló _feladványt_ kap, ahol számára csak a kép látható ameddig nem helyez le egy tippet a játék címéről, minek hatására a helyes válasz láthatóvá válik.
+Az oldalon grafikus kvízek kitöltésére nyílik lehetőség, melyekben a videójátékok képről való felismerése a cél. A játékos N mennyiségű kép-játék név kombinációból álló _feladványt_ kap, ahol számára csak a kép látható ameddig nem helyez le egy tippet a játék címéről, minek hatására a helyes válasz láthatóvá válik.
 Minden parti statisztikája a játék körülményeivel egyetemben rögzítésre kerül. Így pontos kép fog kialakulni minden felhasználó egyéni képpeségeiről és egy-egy _feladvány_ nehézségéről Ezekhez az információkhoz a _látogatók_ intuitív módon férhetnek hozzá.
 Egy számítógép és aktív internet kapcsolat birtokában bárki játszhat, a részvétel nem meghíváshoz vagy regisztrációhoz kötött. Viszont az utóbbira van lehetőség. Minden regisztrált felhasználó előzményeit külön kezeljük ezzel lehetőséget adva a pontos, személyre szabott adatelemzés nyújtására. Továbbá feliratkozás után a felhasználók képesek lesznek visszajelzéseket írni az _adminoknak_.
 Az _adminok_ különleges hatáskörrel rendelkező felhasználók. Ők tudnak módosítani bármely felhasználó és _feladvány_ adatain és új feladványokat hozzáadni. Számukra elérhető egy felhasználói visszajelzés lista is, amin kiemelve szerepelnek a még olvasatlan üzenetek.
@@ -15,7 +15,7 @@ Az _adminok_ különleges hatáskörrel rendelkező felhasználók. Ők tudnak m
 ## 3. Jelenlegi üzleti folyamatok modellje
 Az ügyfél megbízott minket egy videójáték felismerő kvíz oldal elkészítésével.
 A rendszer forrása az ügyfelet fogja illetni. Igényt képez annak további bővítési lehetőségével. Elvárás kód bázis könnyű újra fel használása, alapként használása.
-Működtetni nélkülünk fogják az oldalt. A cég programozói háttérel nem rendelkező személyeket tervez kinevezni karbantartási és moderálási pozíciókra. Tervezés és kivitelezéskor ez kulcs fontosságó szempont. Minden felmerülhető CRUD műveletre grafikus felületet kell biztosítanunk.
+Működtetni nélkülünk fogják az oldalt. A cég programozói háttérrel nem rendelkező személyeket tervez kinevezni karbantartási és moderálási pozíciókra. Tervezés és kivitelezéskor ez kulcs fontosságú szempont. Minden felmerülhető CRUD műveletre grafikus felületet kell biztosítanunk.
 Az oldal adatbányászási céllal jön létre, tehát egy szakszerű, normál formáknak eleget tevő adatbázis szükséges.
 A projektre 3 hónap áll rendelkezésre.
 
@@ -38,7 +38,7 @@ A projektre 3 hónap áll rendelkezésre.
 
 ## 6. Használati esetek
 1. Egy látogató az oldalra téved, hogy kis kisidőre szórakoztassa magát. Játszik egyet-kettőt majd kilép.
-2. Egy videójátékokban méllyen érdekelt személy szeretné felmérni ismereteinek minőséget.
+2. Egy videójátékokban mélyen érdekelt személy szeretné felmérni ismereteinek minőséget.
 3. Egy látogató szeretne tudomást szerezni arról milyen videójátékokat nem ismer még, hogy ötletet kapjon arról mit lenne érdemes kipróbálnia.
 4. Egy moderátor meg akarja tudni mit gondolnak a felhasználók a kvízekről.
 5. Egy moderátor relevánsan akarja tartani az oldalt ezért új kvízt ad hozzá
@@ -67,6 +67,8 @@ A projektre 3 hónap áll rendelkezésre.
 ![játék_forgatókönyv](Forgatókönyvek/játék_forgatókönyv.png)
 4. Kvíz hozzáadása
 ![hozzáadás_forgatókönyv](Forgatókönyvek/hozzáadás_forgatókönyv.png)
+5. Moderáció
+![mod_forgatókönyv](Forgatókönyvek/mod_forgatókönyv.png)
 
 ## 10. Funkció - követelmény megfeleltetése
 
@@ -98,9 +100,9 @@ A projektre 3 hónap áll rendelkezésre.
 		- elérhetőség (bannolva van-e?)
 		- előző játékok
 + **látogató**: olyan fogyasztó aki nem rendelkezik felhasználói fiókkal.
-+ **jogkör**: egy felhasználható álltal végre hajtható műveletek halmaza.
++ **jogkör**: egy felhasználható által végre hajtható műveletek halmaza.
     * fajtái:
         - látogatói: játék
         - felhasználói: játék (rögzítettve); értékelés írás
-        - moderátori: felhasználó; feladvány hozzáadás; felhasználók módosítása; hozzáféres az értékelésekhez
+        - moderátori: felhasználó; feladvány hozzáadás; felhasználók módosítása; hozzáférés az értékelésekhez
 + **IP**: "Intellectual Property"; Szellemi Tulajdon

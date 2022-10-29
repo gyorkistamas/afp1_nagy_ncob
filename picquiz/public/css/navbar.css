@@ -1,14 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-
-body {
-	background-image: url(../src/background.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	font-family: 'Noto Sans', 'Times New Roman' !important;
-	color: white;
-}
-
 .navitem img {
 	border-right: 1px solid white;
 	margin-right: 6px;
@@ -16,33 +5,33 @@ body {
 }
 
 
-.active {
-	background-color: white;
-	color: rgba(0, 0, 0, 0.7) !important;
-	transition-duration: 300ms;
-	transition-timing-function: ease-in;
-}
-
 .navitem.active img {
 	filter: invert(100%);
 }
 
 .navitem {
-	color: white;
+	color:  white;
 	border: 1px solid white;
 	margin-right: 10px;
 	border-radius: 5px;
 }
 
+.active {
+	background-color: white;
+	color: black !important;
+	transition-duration: 300ms;
+	transition-timing-function: ease-in;
+}
+
 .navitem:hover {
 	background-color: white;
-	color: rgba(0, 0, 0, 0.7) !important;
+	color: rgba(0, 0, 0, 0.7);
 	transition-duration: 300ms;
 	transition-timing-function: ease-in;
 }
 
 .navitem:hover img {
-	filter: invert(100%);
+	filter: invert(100%) !important;
 }
 
 nav {
@@ -58,6 +47,7 @@ nav {
 	margin-left: 0px;
 	margin-right: 0px;
 	border-radius: 0px;
+
 	transition-duration: 200ms;
 	transform-origin: top;
 	transition-timing-function: ease-in-out;
