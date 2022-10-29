@@ -33,7 +33,7 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="/" class="nav-link navitem active mt-2 mt-xl-0"><img src="images/icons/mainPageIcon.png">Főoldal</a>
+						<a href="/" class="nav-link navitem {{ Request::is('/') ? 'active' : '' }} mt-2 mt-xl-0"><img src="images/icons/mainPageIcon.png">Főoldal</a>
 					</li>
 
 					<li class="nav-item mt-2 mt-lg-0">
@@ -90,7 +90,7 @@
 					@if (!Auth::check())
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="/register" class="nav-link navitem mb-2 mb-xl-0"><img src="images/icons/registerIcon.png">Regisztráció</a>
+						<a href="/register" class="nav-link navitem {{ Request::is('register') ? 'active' : '' }} mb-2 mb-xl-0"><img src="images/icons/registerIcon.png">Regisztráció</a>
 					</li>
 
 					<li class="nav-item mt-2 mt-lg-0">
