@@ -34,18 +34,17 @@
 								src="images/icons/newGameIcon.png">Új játék</a>
 					</li>
 
-					@if(Auth::check() && $user->isAdmin)
+					@if (Auth::check() && $user->isAdmin)
 
 					<li class="nav-item mt-2 mt-lg-0">
 						<a href="#" class="nav-link navitem mt-2 mt-xl-0"><img
-								src="images/icons/newGameIcon.png">Felhasználók</a>
+								src="images/icons/listUsersIcon.png">Felhasználók</a>
 					</li>
 
 					<li class="nav-item mt-2 mt-lg-0">
 						<a href="#" class="nav-link navitem mt-2 mt-xl-0"><img
-								src="images/icons/newGameIcon.png">Feladványok</a>
+								src="images/icons/listAllQuizzes.png">Feladványok</a>
 					</li>
-
 
 					@endif
 					
@@ -56,6 +55,16 @@
 					</li>
 
 					@endif
+
+
+					@if (Auth::check() && $user->isAdmin)
+
+					<li class="nav-item mt-2 mt-lg-0">
+						<a href="kapcsolat.html" class="nav-link navitem mt-2 mt-xl-0 mb-3 mb-xl-0"><img src="images/icons/feedbackIcon.png">Visszajelzések megtekintése</a>
+					</li>
+
+					@endif
+
 
 				</ul>
 
