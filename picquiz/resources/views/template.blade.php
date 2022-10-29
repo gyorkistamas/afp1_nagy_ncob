@@ -15,9 +15,9 @@
 <body>
 
     <div id="navtop"></div>
-	<nav class="navbar navbar-dark navbar-expand-md bg-dark sticky-top" id="nav">
+	<nav class="navbar navbar-dark navbar-expand-xl bg-dark sticky-top" id="nav">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="/">PicQuiz</a>
+			<a class="navbar-brand" href="/"><img src="favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="" style="filter: invert(100%);">PicQuiz</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
 				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 				aria-label="Toggle navigation">
@@ -26,20 +26,16 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="/" class="nav-link navitem active"><img src="images/mainPageIcon.png">Főoldal</a>
+						<a href="/" class="nav-link navitem active mt-3 mt-xl-0"><img src="images/icons/mainPageIcon.png">Főoldal</a>
 					</li>
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="#" class="nav-link navitem"><img
-								src="images/newGameIcon.png">Új játék</a>
-					</li>
-
-					<li class="nav-item mt-2 mt-lg-0">
-						<a href="#" class="nav-link navitem"><img
-								src="images/viewProfileIcon.png">Profil megtekintése</a>
+						<a href="#" class="nav-link navitem mt-3 mt-xl-0"><img
+								src="images/icons/newGameIcon.png">Új játék</a>
 					</li>
 
+
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="kapcsolat.html" class="nav-link navitem"><img src="images/feedbackIcon.png">Visszajelzés</a>
+						<a href="kapcsolat.html" class="nav-link navitem mt-3 mt-xl-0 mb-5 mb-xl-0"><img src="images/icons/feedbackIcon.png">Visszajelzés</a>
 					</li>
 
 				</ul>
@@ -47,10 +43,14 @@
 
 				<ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-end">
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="/register" class="nav-link navitem"><img src="images/registerIcon.png">Regisztráció</a>
+						<a href="#" class="nav-link navitem mt-3 mt-xl-0 mb-2 mb-xl-0"><img
+								src="images/icons/viewProfileIcon.png">Profil megtekintése</a>
 					</li>
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="" class="nav-link navitem"><img src="images/loginIcon.png">Bejelentkezés</a>
+						<a href="/register" class="nav-link navitem mb-2 mb-xl-0"><img src="images/icons/registerIcon.png">Regisztráció</a>
+					</li>
+					<li class="nav-item mt-2 mt-lg-0">
+						<a href="" class="nav-link navitem"><img src="images/icons/loginIcon.png">Bejelentkezés</a>
 					</li>
 				</ul>
 
