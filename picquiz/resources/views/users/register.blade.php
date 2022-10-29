@@ -5,7 +5,6 @@
 @endsection
 
 @section('content')
-<<<<<<< HEAD
 <section class="vh-100">
   <div class="container h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -79,7 +78,4 @@
   </div>
 </section>
 
-=======
-<h1>Regisztráció</h1>
->>>>>>> 05c94c6183fe6c07f04e0ab48fe7c32fc2e3483f
 @endsection
