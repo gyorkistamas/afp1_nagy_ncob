@@ -18,9 +18,8 @@
 	<hr>
 
 	<div class="row">
-
-		<div class="col-12 d-flex justify-content-center">
-			<div id="carouselExampleIndicators" class="carousel slide w-50" data-bs-ride="true">
+		<div class="col-12 col-lg-4 d-flex justify-content-center">
+			<div id="carouselExampleIndicators" class="carousel slide w-100" data-bs-ride="true">
 				<div class="carousel-indicators">
 				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 				  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -48,14 +47,19 @@
 			  </div>
 		</div>
 
-		<hr class="mt-2">
+		<hr class="mt-2 d-block d-lg-none">
 
-		<div class="col-12">
+		<div class="col-12 col-lg-8">
 			<h3>A játék lényege:</h3>
 			<p>A játék során képeket fogsz látni játékokból kiemelve. A feladatod, hogy meghatározd a játék címét. A végén kiderül, hogy mennyit találtál el. Ha szeretnéd elmenteni az eredményed, akkor regisztrálj az oldalon!</p>
-			<h6>Jó szorakozást kívánunk!</h6>
+			<h6>Jó szórakozást kívánunk!</h6>
 			<a class="btn btn-success" href="#">Új játék indítása</a>
 		</div>
+	</div>
+
+
+	<div class="row mt-3" style="font-size: 12px;">
+		Készítette: Karácsony Balázs, Györkis Tamás, Kovács Dávid
 	</div>
 
 </div>
