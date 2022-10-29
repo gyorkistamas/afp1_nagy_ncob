@@ -26,32 +26,72 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="/" class="nav-link navitem active mt-3 mt-xl-0"><img src="images/icons/mainPageIcon.png">Főoldal</a>
+						<a href="/" class="nav-link navitem active mt-2 mt-xl-0"><img src="images/icons/mainPageIcon.png">Főoldal</a>
 					</li>
+
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="#" class="nav-link navitem mt-3 mt-xl-0"><img
+						<a href="#" class="nav-link navitem mt-2 mt-xl-0"><img
 								src="images/icons/newGameIcon.png">Új játék</a>
 					</li>
 
+					@if(Auth::check() && $user->isAdmin)
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="kapcsolat.html" class="nav-link navitem mt-3 mt-xl-0 mb-5 mb-xl-0"><img src="images/icons/feedbackIcon.png">Visszajelzés</a>
+						<a href="#" class="nav-link navitem mt-2 mt-xl-0"><img
+								src="images/icons/newGameIcon.png">Felhasználók</a>
 					</li>
+
+					<li class="nav-item mt-2 mt-lg-0">
+						<a href="#" class="nav-link navitem mt-2 mt-xl-0"><img
+								src="images/icons/newGameIcon.png">Feladványok</a>
+					</li>
+
+
+					@endif
+					
+					@if (Auth::check())
+
+					<li class="nav-item mt-2 mt-lg-0">
+						<a href="kapcsolat.html" class="nav-link navitem mt-2 mt-xl-0 mb-3 mb-xl-0"><img src="images/icons/feedbackIcon.png">Visszajelzés</a>
+					</li>
+
+					@endif
 
 				</ul>
 
 
 				<ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-end">
+
+					@if (Auth::check())
+
 					<li class="nav-item mt-2 mt-lg-0">
 						<a href="#" class="nav-link navitem mt-3 mt-xl-0 mb-2 mb-xl-0"><img
 								src="images/icons/viewProfileIcon.png">Profil megtekintése</a>
 					</li>
+
+					@endif
+
+					@if (!Auth::check())
+
 					<li class="nav-item mt-2 mt-lg-0">
 						<a href="/register" class="nav-link navitem mb-2 mb-xl-0"><img src="images/icons/registerIcon.png">Regisztráció</a>
 					</li>
+
 					<li class="nav-item mt-2 mt-lg-0">
 						<a href="" class="nav-link navitem"><img src="images/icons/loginIcon.png">Bejelentkezés</a>
 					</li>
+
+					@endif
+
+
+					@if (Auth::check())
+
+					<li class="nav-item mt-2 mt-lg-0">
+						<a href="" class="nav-link navitem"><img src="images/icons/logoutIcon.png">Kijelentkezés</a>
+					</li>
+
+					@endif
+
 				</ul>
 
 			</div>
