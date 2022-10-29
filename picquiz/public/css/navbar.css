@@ -10,7 +10,7 @@
 }
 
 .navitem {
-	color:  white !important;
+	color:  white;
 	border: 1px solid white;
 	margin-right: 10px;
 	border-radius: 5px;
@@ -31,7 +31,7 @@
 }
 
 .navitem:hover img {
-	filter: invert(100%);
+	filter: invert(100%) !important;
 }
 
 nav {
