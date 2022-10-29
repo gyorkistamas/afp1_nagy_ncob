@@ -20,3 +20,6 @@ Route::get('/', function () {
 
 //Route to register
 Route::get('/register', [UserController::class, 'create']);
+
+//Route to upload user to database
+Route::post('/users', [UserController::class, 'store']);
