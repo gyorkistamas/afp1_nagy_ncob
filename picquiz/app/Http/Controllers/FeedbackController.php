@@ -22,7 +22,7 @@ class FeedbackController extends Controller
             return view('feedbacks.newFeedback');
         }
         else {
-            abort(404);
+            return redirect('/login');
         }
     }
 
@@ -42,6 +42,6 @@ class FeedbackController extends Controller
 
         $fb = Feedback::create($formFields);
 
-        return redirect('/feedback/new')->with('message', 'A visszajelzése rögzítésre került, köszönjük!');
+        return redirect('/feedback/new')->with('message', 'A visszajelzése rögzítésre került!');
     }
 }
