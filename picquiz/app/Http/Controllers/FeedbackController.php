@@ -13,7 +13,13 @@ class FeedbackController extends Controller
     //
 
     public function index() {
-        //TODO: megírni
+        if (!Auth::check() || Auth::User()->isAdmin != 1) {
+            return abort(401);
+        }
+
+        return view('feedbacks.allFeedback', [
+            'feedbacks' => Feedback::orderBy('read')->orderBy('created_at')->paginate(2)
+        ]);
     }
 
 
@@ -43,5 +49,21 @@ class FeedbackController extends Controller
         $fb = Feedback::create($formFields);
 
         return redirect('/feedback/new')->with('message', 'A visszajelzése rögzítésre került!');
+    }
+
+
+    public function update(Request $request, $id) {
+        $fb = Feedback::find($id);
+
+        if(!$fb) {
+            return abort(404);
+        }
+
+        $fb->read = $request->read;
+        $fb->save();
+
+        $word = $request->read == "1" ? 'olvasottként' : 'olvasatlanként';
+        $message = "Visszajelzés megjelölve $word !";
+        return redirect('/feedback/all')->with('message', $message);
     }
 }

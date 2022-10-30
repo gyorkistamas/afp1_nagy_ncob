@@ -34,8 +34,14 @@ Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 Route::get('/logout', [UserController::class, 'logout']);
 
 
+//Route to all feedbacks
+Route::get('feedback/all', [FeedbackController::class, 'index']);
+
 //Route to feedback form
 Route::get('/feedback/new', [FeedbackController::class, 'create']);
 
 //Route to feedback upload
 Route::post('/feedback/new', [FeedbackController::class, 'store']);
+
+//Route to feedback updateRead
+Route::put('/feedback/all/{id}', [FeedbackController::class, 'update']);
