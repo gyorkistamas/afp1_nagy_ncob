@@ -30,4 +30,4 @@ Route::get('/login', [UserController::class, 'login']);
 //Route to login user (login logic):
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
-Route::post('/logout', [UserController::class, 'logout']);
+Route::get('/logout', [UserController::class, 'logout']);
