@@ -18,7 +18,7 @@ class FeedbackController extends Controller
         }
 
         return view('feedbacks.allFeedback', [
-            'feedbacks' => Feedback::orderBy('read')->orderBy('created_at')->paginate(5)
+            'feedbacks' => Feedback::orderBy('read')->orderByDesc('created_at')->paginate(5)
         ]);
     }
 
