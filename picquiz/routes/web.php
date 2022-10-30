@@ -19,6 +19,8 @@ Route::get('/', function () {
     return view('mainpage');
 });
 
+//----------------- Login and register routes ---------------------
+
 //Route to register form:
 Route::get('/register', [UserController::class, 'create']);
 
@@ -33,6 +35,8 @@ Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 Route::get('/logout', [UserController::class, 'logout']);
 
+
+//--------- Feedback routes ----------------------------------------
 
 //Route to all feedbacks
 Route::get('feedback/all', [FeedbackController::class, 'index']);
