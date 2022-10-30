@@ -36,3 +36,6 @@ Route::get('/logout', [UserController::class, 'logout']);
 
 //Route to feedback form
 Route::get('/feedback/new', [FeedbackController::class, 'create']);
+
+//Route to feedback upload
+Route::post('/feedback/new', [FeedbackController::class, 'store']);
