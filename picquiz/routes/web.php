@@ -18,8 +18,16 @@ Route::get('/', function () {
     return view('mainpage');
 });
 
-//Route to register
+//Route to register form:
 Route::get('/register', [UserController::class, 'create']);
 
-//Route to upload user to database
+//Route to upload user to database (register logic):
 Route::post('/users', [UserController::class, 'store']);
+
+//Route to login form:
+Route::get('/login', [UserController::class, 'login']);
+
+//Route to login user (login logic):
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
+Route::post('/logout', [UserController::class, 'logout']);
