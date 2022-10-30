@@ -94,7 +94,7 @@
 					</li>
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="" class="nav-link navitem"><img src="images/icons/loginIcon.png">Bejelentkezés</a>
+						<a href="/login" class="nav-link navitem {{ Request::is('login') ? 'active' : '' }} mb-2 mb-xl-0"><img src="images/icons/loginIcon.png">Bejelentkezés</a>
 					</li>
 
 					@endif
@@ -103,7 +103,7 @@
 					@if (Auth::check())
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="" class="nav-link navitem"><img src="images/icons/logoutIcon.png">Kijelentkezés</a>
+						<a href="/logout" class="nav-link navitem"><img src="images/icons/logoutIcon.png">Kijelentkezés</a>
 					</li>
 
 					@endif
