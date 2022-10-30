@@ -29,15 +29,12 @@
                 @csrf
                   <div class="d-flex flex-row align-items-center mb-4">
 
-                    <!--<img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                      class="img-fluid" alt="Sample image">-->
-
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       
                       <input 
                         type="file" 
-                        name="profilePicture" 
+                        name="profile_picture" 
                         id="profilePictureInput" 
                         accept="image/*" 
                         class="form-control"
@@ -48,9 +45,6 @@
                   </div>
 
                   <div class="d-flex flex-row align-items-center mb-4">
-
-                    <!--<img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                      class="img-fluid" alt="Sample image">-->
 
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
