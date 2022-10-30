@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FeedbackController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -31,3 +32,7 @@ Route::get('/login', [UserController::class, 'login']);
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 Route::get('/logout', [UserController::class, 'logout']);
+
+
+//Route to feedback form
+Route::get('/feedback/new', [FeedbackController::class, 'create']);
