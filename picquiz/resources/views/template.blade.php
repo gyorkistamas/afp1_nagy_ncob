@@ -41,7 +41,7 @@
 								src="images/icons/newGameIcon.png">Új játék</a>
 					</li>
 
-					@if (Auth::check() && $user->isAdmin)
+					@if (Auth::check() && Auth::User()->isAdmin == 1)
 
 					<li class="nav-item mt-2 mt-lg-0">
 						<a href="#" class="nav-link navitem mt-2 mt-xl-0"><img
@@ -64,7 +64,7 @@
 					@endif
 
 
-					@if (Auth::check() && $user->isAdmin)
+					@if (Auth::check() && Auth::User()->isAdmin == 1)
 
 					<li class="nav-item mt-2 mt-lg-0">
 						<a href="kapcsolat.html" class="nav-link navitem mt-2 mt-xl-0 mb-3 mb-xl-0"><img src="images/icons/feedbackIcon.png">Visszajelzések megtekintése</a>
