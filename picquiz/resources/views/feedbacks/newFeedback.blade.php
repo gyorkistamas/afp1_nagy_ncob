@@ -15,7 +15,7 @@
 
 		<hr>
 
-		<form method="POST" action="/">
+		<form method="POST" action="/feedback/new">
 			@csrf
 
 		
@@ -26,9 +26,9 @@
 
 				<div class="col-12 col-md-4">
 					<label for="title" class="form-label">Visszajelzés címe:</label>
-					<input class="form-control" type="text" name="title" id="title" placeholder="Hiba, észrevétel, javaslat stb." required>
+					<input class="form-control" type="text" name="title" id="title" placeholder="Hiba, észrevétel, javaslat stb." value="{{ old("title") }}" required>
 					@error('title')
-                        <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                        <p class="text-danger text-xs mt-1">{{$message}}</p>
                       @enderror
 				</div>
 			</div>
@@ -37,9 +37,9 @@
 			<div class="row">
 				<div class="col-12 mt-2">
 					<label for="message" class="form-label">Üzenete:</label>
-					<textarea class="form-control" name="message" id="message" rows="10" placeholder="Ide írja az üzenetét" required></textarea>
+					<textarea class="form-control" name="message" id="message" rows="10" placeholder="Ide írja az üzenetét" required>{{ old("message") }}</textarea>
 					@error('message')
-                        <p class="text-red-500 text-xs mt-1">{{$message}}</p>
+                        <p class="text-danger text-xs mt-1">{{$message}}</p>
                     @enderror
 				</div>
 			</div>

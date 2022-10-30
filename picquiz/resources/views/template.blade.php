@@ -55,7 +55,7 @@
 
 					@endif
 					
-					@if (Auth::check() && Auth::User()->isAdmin != 1)
+					@if (Auth::check())
 
 					<li class="nav-item mt-2 mt-lg-0">
 						<a href="/feedback/new" class="nav-link navitem mt-2 mt-xl-0 mb-3 mb-xl-0  {{ Request::is('feedback/new') ? 'active' : '' }} "><img src="/images/icons/feedbackIcon.png">Visszajelzés</a>
