@@ -29,7 +29,7 @@ class UserController extends Controller
             
         }   
         else {
-            $formFields['profile_picture'] = "images/samplePictures/Sample_User_Icon.png";
+            $formFields['profile_picture'] = "/images/samplePictures/Sample_User_Icon.png";
         }
 
         //dd($formFields['profile_picture']);
