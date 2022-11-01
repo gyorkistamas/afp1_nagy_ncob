@@ -67,7 +67,7 @@
 					@if (Auth::check() && Auth::User()->isAdmin == 1)
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="/feedback/all" class="nav-link navitem mt-2 mt-xl-0 mb-3 mb-xl-0"><img src="/images/icons/feedbackIcon.png">Visszajelzések megtekintése</a>
+						<a href="/feedback/all" class="nav-link navitem mt-2 mt-xl-0 mb-3 mb-xl-0 {{ Request::is('feedback/all') ? 'active' : '' }}"><img src="/images/icons/feedbackIcon.png">Visszajelzések megtekintése</a>
 					</li>
 
 					@endif
