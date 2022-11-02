@@ -2,10 +2,17 @@
 
 @php
 	$debug = True;
+
+	$answer = 'asd';
+	$pic = 'asd';
+
+	$hits = 0;
+	$nth = 1;
+	$per = 10;
 @endphp
 
 @section('title')
-<title>Előkészület</title>
+<title>Játék</title>
 @endsection
 
 
@@ -23,7 +30,10 @@
 
 	<div class="row">
 		<div class="col-12 col-lg-4 d-flex justify-content-center">
-			<img class="col-12" id=qimg src="images/undefined.jpg">
+			<img class="col-12" id=qimg
+					src="{{ $pic }}"
+					onerror="this.onerror=null; this.src='images/undefined.jpg'"
+			>
 			</img>
 		</div>
 
@@ -33,11 +43,11 @@
 			<div style="display: flex; justify-content: space-between;">
 				<div class=mb-4>
 					<h3>Tipp:</h3>
-					<input></input>
+					<input placeholder="játék név"></input>
 				</div>
 				<div style="float: right;">
-					<h4>N/M</h4>
-					<h4>K találat</h4>
+					<h4>{{ $nth }}/{{ $per }}</h4>
+					<h4>{{ $hits }} találat</h4>
 				</div>
 			</div>
 			<a class="btn btn-success" href="/play">Beküldés</a>
@@ -49,6 +59,10 @@
 	<div class="row mt-3" style="font-size: 12px;">
 		Készítette: Karácsony Balázs, Györkis Tamás, Kovács Dávid
 	</div>
+
+	@if ($debug)
+		<span class="text-warning">answer: {{$answer}}<span>
+	@endif
 
 </div>
 

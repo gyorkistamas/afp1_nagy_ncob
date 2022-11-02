@@ -54,7 +54,7 @@ Route::put('/feedback/all/{id}', [FeedbackController::class, 'update']);
 //--------- Game routes --------------------------------------------
 Route::get('/new', function(){ return view('game/newGame'); });
 
-Route::get('/play', function(){ return view('game/game'); });
+Route::post('/play', function(){ return view('game/game'); });
 
 
 
