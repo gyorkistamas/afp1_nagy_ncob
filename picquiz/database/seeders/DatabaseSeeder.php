@@ -4,8 +4,6 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-use App\Models\Feedback;
-use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -27,31 +25,9 @@ class DatabaseSeeder extends Seeder
         //     'isAdmin' => '1'
         // ]);
 
-        User::create([
-            'username' => 'admin',
-            'email' => 'admin@ncob.com',
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-            'profile_picture' => '/images/samplePictures/Sample_User_Icon.png',
-            'isAdmin' => '1'
-        ]);
-
-        User::create([
-            'username' => 'normalUser',
-            'email' => 'normal@ncob.com',
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-            'profile_picture' => '/images/samplePictures/Sample_User_Icon.png',
-        ]);
-
-        Feedback::create([
-            'creator' => '2',
-            'title' => 'Teszt',
-            'message' => 'Ez egy teszt visszajelzés.'
-        ]);
-
-        Feedback::create([
-            'creator' => '2',
-            'title' => 'Teszt 2',
-            'message' => 'Ez egy másik teszt visszajelzés.'
-        ]);
+		$this->call([
+			UserSeeder::class,
+			FeedbackSeeder::class
+		]);
     }
 }
