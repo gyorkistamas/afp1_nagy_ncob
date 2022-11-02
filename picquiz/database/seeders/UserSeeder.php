@@ -37,5 +37,12 @@ class UserSeeder extends Seeder
             'profile_picture' => '/images/samplePictures/Sample_User_Icon.png',
         ]);
 
+        User::create([
+            'username' => 'anon',
+            'email' => 'anon@anon.anon',
+            'password' => '$2y$10$UDygSgB3GfyHM3RX5X5XLu3BuK2/PjZayA1AyYQUIVMZyl77GYVKO',
+            'profile_picture' => 'images/uploads/users/0IFeydcWKq3ZZ1lfSAxbIryOtoL1sxpcxpq00yJB.jpg',
+        ]);
+
     }
 }
