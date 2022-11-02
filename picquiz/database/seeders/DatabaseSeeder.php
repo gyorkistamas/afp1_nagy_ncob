@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use Illuminate\Database\Seeder;
+use App\Models\Puzzle;
 
 class DatabaseSeeder extends Seeder
 {
@@ -29,5 +30,7 @@ class DatabaseSeeder extends Seeder
 			UserSeeder::class,
 			FeedbackSeeder::class
 		]);
+
+		Puzzle::factory()->count(20)->create();
     }
 }
