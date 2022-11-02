@@ -57,7 +57,7 @@
 			<h3>Hány kérdés szerepeljen:</h3>
 			<input type=number min=1 value=10 placeholder=10></input>
 			<h6 mb-3>Sok sikert!</h6>
-			<a class="btn btn-success" href="/play">Kezdés</a>
+			<a class="btn btn-success" href="#">Kezdés</a>
 		</div>
 	</div>
 
