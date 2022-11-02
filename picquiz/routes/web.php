@@ -49,3 +49,10 @@ Route::post('/feedback/new', [FeedbackController::class, 'store']);
 
 //Route to feedback updateRead
 Route::put('/feedback/all/{id}', [FeedbackController::class, 'update']);
+
+
+//--------- Game routes --------------------------------------------
+Route::get('/play', function(){ return view('game/newGame'); });
+
+
+
