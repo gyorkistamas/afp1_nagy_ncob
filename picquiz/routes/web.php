@@ -65,3 +65,5 @@ Route::get('/play', function(){ return view('game/game'); });
 
 //Route::get('/UserDoList', [UserListController::class, 'do_list']);
 Route::get('/UserList', function() {return view('users/list'); } );
+
+Route::post('/toggleBan', [UserController::class, 'toggle_ban'] );
