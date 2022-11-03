@@ -90,7 +90,7 @@
 					@if (!Auth::check())
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="/register" class="nav-link navitem {{ Request::is('register') ? 'active' : '' }} mb-2 mb-xl-0"><img src="/images/icons/registerIcon.png">Regisztráció</a>
+						<a href="/register" class="nav-link navitem {{ Request::is('register') ? 'active' : '' }} mb-2 mb-xl-0 mt-3 mt-xl-0"><img src="/images/icons/registerIcon.png">Regisztráció</a>
 					</li>
 
 					<li class="nav-item mt-2 mt-lg-0">
