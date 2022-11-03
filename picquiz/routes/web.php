@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\FeedbackController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FeedbackController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\GameController;
+use App\Http\Controllers\UserListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,9 +54,13 @@ Route::put('/feedback/all/{id}', [FeedbackController::class, 'update']);
 
 
 //--------- Game routes --------------------------------------------
+
 Route::get('/new', function(){ return view('game/newGame'); });
 
-Route::post('/play', function(){ return view('game/game'); });
+Route::post('/generateNewGame', [GameController::class, 'generate']);
 
+Route::get('/play', function(){ return view('game/game'); });
 
+//--------- Admin routes --------------------------------------------
 
+Route::get('/UserDoList', [UserListController::class, 'do_list']);
