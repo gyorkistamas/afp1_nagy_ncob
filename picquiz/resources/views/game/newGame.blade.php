@@ -50,10 +50,10 @@
 		<hr class="mt-2 d-block d-lg-none">
 
 		<div class="col-12 col-lg-8">
-			<form action="/play" method="post">
+			<form action="/generateNewGame" method="post">
 				@csrf
 				<h3>Hány kérdés szerepeljen:</h3>
-				<input type=number min=1 value=10 placeholder=10></input>
+				<input id=game_len name=game_len type=number min=1 value=10 placeholder=10></input>
 				<h6 mb-3>Sok sikert!</h6>
 				<button class="btn btn-success" type=submit>Kezdés</button>
 			</form>
