@@ -37,7 +37,7 @@
 					</li>
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="#" class="nav-link navitem mt-2 mt-xl-0"><img
+						<a href="/new" class="nav-link navitem mt-2 mt-xl-0"><img
 								src="/images/icons/newGameIcon.png">Új játék</a>
 					</li>
 
