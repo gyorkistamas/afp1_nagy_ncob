@@ -47,8 +47,10 @@
 								<span class="text-danger">Nem</span>
 							@endif
 						</div>
-						<form class="d-inline-block" action="/toggleBan" method=post>
+						<form class="d-inline-block" action="/toggleAdmin" method=post>
 							@csrf
+							<input class="d-none" name=uid value="{{ $user->id }}">
+							<input class="d-none" name=field value="isAdmin">
 							<button class="btn btn-warning">Átváltás</button>
 						</form>
 					</div>
@@ -64,6 +66,7 @@
 						<form class="d-inline-block" action="/toggleBan" method=post>
 							@csrf
 							<input class="d-none" name=uid value="{{ $user->id }}">
+							<input class="d-none" name=field value="isBanned">
 							<button class="btn btn-warning">Átváltás</button>
 						</form>
 					</div>

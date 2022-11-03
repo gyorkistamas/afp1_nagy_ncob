@@ -79,25 +79,29 @@ class UserController extends Controller
 
 	// ### Modify ###
 
-	public function toggle_ban(Request $request){
+	public function user_list_toggle(Request $request){
         if (!Auth::check() || Auth::User()->isAdmin != 1) {
             return abort(401);
         }
-
-		$uid = $request->uid;
-		if(User::where('id', $uid)->get()[0]->isBanned){
-			$this->set_ban($uid, False);
-		}else{
-			$this->set_ban($uid, true);
-		}
+        if (!isset($request->uid) || !isset($request->field)) {
+            return abort(419);
+        }
+		$this->toggle_field($request->uid, $request->field);
 
 		return redirect('/UserList');
 	}
 
-    private function set_ban($uid, $banned)
+	private function toggle_field($uid, $field){
+		if(User::where('id', $uid)->get()[0][$field]){
+			$this->set_bool_field($uid, False, $field);
+		}else{
+			$this->set_bool_field($uid, true, $field);
+		}
+	}
+
+    private function set_bool_field($uid, $b, $field)
     {
-		User::where('id', $uid)->update(['isBanned' => $banned]);
-		return;
+		User::where('id', $uid)->update([$field => $b]);
     }
 
 }
