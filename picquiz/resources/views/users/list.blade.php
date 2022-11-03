@@ -38,21 +38,31 @@
 			<div class="col-4">
 				<div class="col-12 float-right">
 					<a href="" class="btn btn-success col-12 mb-4">Profil</a>
-					<div class="col-12">
-						<h4 class="d-inline">admin?</h4>
-						@if ($user->isAdmin)
-							<span class="text-success">Igen</span>
-						@else
-							<span class="text-danger">Nem</span>
-						@endif
+					<div class="d-flex justify-content-between mb-2">
+						<div class="d-inline-block">
+							<h4 class="d-inline">admin?</h4>
+							@if ($user->isAdmin)
+								<span class="text-success">Igen</span>
+							@else
+								<span class="text-danger">Nem</span>
+							@endif
+						</div>
+						<form class="d-inline-block">
+							<button class="btn btn-warning">Átváltás</button>
+						</form>
 					</div>
-					<div class="col-12">
-						<h4 class="d-inline">Bannolva?</h4>
-						@if ($user->isBanned)
-							<span class="text-danger">Igen</span>
-						@else
-							<span class="text-success">Nem</span>
-						@endif
+					<div class="d-flex justify-content-between">
+						<div class="d-inline-block">
+							<h4 class="d-inline">Bannolva?</h4>
+							@if ($user->isBanned)
+								<span class="text-danger">Igen</span>
+							@else
+								<span class="text-success">Nem</span>
+							@endif
+						</div>
+						<form class="d-inline-block">
+							<button class="btn btn-warning">Átváltás</button>
+						</form>
 					</div>
 				</div>
 			</div>
