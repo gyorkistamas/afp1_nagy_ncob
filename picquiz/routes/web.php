@@ -63,4 +63,5 @@ Route::get('/play', function(){ return view('game/game'); });
 
 //--------- Admin routes --------------------------------------------
 
-Route::get('/UserDoList', [UserListController::class, 'do_list']);
+//Route::get('/UserDoList', [UserListController::class, 'do_list']);
+Route::get('/UserList', function() {return view('users/list'); } );
