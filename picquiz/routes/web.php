@@ -65,6 +65,8 @@ Route::post('/generateNewGame', [GameController::class, 'generate']);
 
 Route::get('/play', function(){ return view('game/game'); });
 
+Route::get('/games/{userID}/list', [GameController::class, 'list']);
+
 //--------- Admin routes --------------------------------------------
 
 //Route::get('/UserDoList', [UserListController::class, 'do_list']);
