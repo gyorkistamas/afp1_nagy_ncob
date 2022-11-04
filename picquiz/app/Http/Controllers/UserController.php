@@ -26,6 +26,7 @@ class UserController extends Controller
         
         if ($request->hasFile('profile_picture')) {
             $formFields['profile_picture'] = $request->file('profile_picture')->store('images/uploads/users', 'public');
+            $formFields['profile_picture'] = '/storage/'.$formFields['profile_picture'];
             
         }   
         else {
@@ -39,7 +40,7 @@ class UserController extends Controller
 
         $user = User::create($formFields);
 
-        return redirect('/')->with('message', 'Példa szöveg regisztráció tesztelésére!');
+        return redirect('/')->with('message', 'Sikeres regisztráció!');
     }
 
     //Show Login form:
@@ -74,8 +75,8 @@ class UserController extends Controller
     }
 
     //View User:
-    public function view(User $user) {
-        return view('users.view', ['user' => $user]);
+    public function view() {
+        return view('users.view');
     }
 
 }
