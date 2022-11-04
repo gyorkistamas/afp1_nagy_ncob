@@ -27,9 +27,8 @@
                 <p class="text-white mb-4">Csatlakozás ideje</p>
             </div>
 
-            <button type="button" class="btn btn-primary btn-rounded btn-lg">
-              Profil szerkesztése
-            </button>
+            
+            <a class="btn btn-primary btn-rounded btn-lg" href="/users/edit">Profil szerkesztése</a>
             <div class="d-flex justify-content-between text-center mt-5 mb-2">
               <div>
                 <p class="mb-2 h5">{{Auth::User()->numberOfGames}}</p>

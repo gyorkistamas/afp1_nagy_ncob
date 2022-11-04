@@ -78,4 +78,9 @@ class UserController extends Controller
         return view('users.view', ['user' => $user]);
     }
 
+    //Show Edit view
+    public function edit() {
+        return view('users.edit');
+    }
+
 }

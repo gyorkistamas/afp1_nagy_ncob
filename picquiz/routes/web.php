@@ -39,6 +39,7 @@ Route::get('/logout', [UserController::class, 'logout']);
 
 //----------------- User routes ---------------------
 Route::get('/users/{userID}/view', [UserController::class, 'view'])->middleware('auth');
+Route::get('/users/edit', [UserController::class, 'edit'])->middleware('auth');
 
 
 //--------- Feedback routes ----------------------------------------
