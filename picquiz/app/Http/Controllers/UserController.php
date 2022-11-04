@@ -104,4 +104,9 @@ class UserController extends Controller
 		User::where('id', $uid)->update([$field => $b]);
     }
 
+    //View User:
+    public function view(User $user) {
+        return view('users.view', ['user' => $user]);
+    }
+
 }

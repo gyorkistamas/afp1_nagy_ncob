@@ -30,12 +30,15 @@ Route::get('/register', [UserController::class, 'create']);
 Route::post('/users', [UserController::class, 'store']);
 
 //Route to login form:
-Route::get('/login', [UserController::class, 'login']);
+Route::get('/login', [UserController::class, 'login'])->name('login');
 
 //Route to login user (login logic):
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 Route::get('/logout', [UserController::class, 'logout']);
+
+//----------------- User routes ---------------------
+Route::get('/users/{userID}/view', [UserController::class, 'view'])->middleware('auth');
 
 
 //--------- Feedback routes ----------------------------------------

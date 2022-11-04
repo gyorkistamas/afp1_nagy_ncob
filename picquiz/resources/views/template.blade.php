@@ -81,7 +81,7 @@
 					@if (Auth::check())
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="#" class="nav-link navitem mt-3 mt-xl-0 mb-2 mb-xl-0"><img
+						<a href="/users/{{Auth::User()->id}}/view" class="nav-link navitem mt-3 mt-xl-0 {{ Request::is('users/*/view') ? 'active' : '' }} mb-2 mb-xl-0"><img
 								src="/images/icons/viewProfileIcon.png">Profil megtekintése</a>
 					</li>
 
