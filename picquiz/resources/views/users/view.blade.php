@@ -30,6 +30,7 @@
             <button type="button" class="btn btn-success btn-rounded btn-lg">
               Profil szerkesztése
             </button>
+            
             <div class="d-flex justify-content-between text-center mt-5 mb-2">
               <div>
                 <p class="mb-2 h5">{{Auth::User()->numberOfGames}}</p>
