@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('title')
-<title>{{Str::title(Auth::User()->username)}} megtekintése</title>
+<title>{{ Str::title(Auth::User()->username) }} megtekintése</title>
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
         <div class="card bg-dark text-white" style="border-radius: 15px;">
           <div class="card-body text-center">
             <div class="mt-3 mb-4">
-              <img src="{{Auth::User()->profile_picture}}"
+              <img src="{{ asset(Auth::User()->profile_picture) }}"
                 class="rounded-circle img-fluid" style="width: 100px;" />
             </div>
             <h4 class="mb-2">{{Auth::User()->username}}</h4>
@@ -27,8 +27,9 @@
                 <p class="text-white mb-4">Csatlakozás ideje</p>
             </div>
 
-            
-            <a class="btn btn-primary btn-rounded btn-lg" href="/users/edit">Profil szerkesztése</a>
+            <button type="button" class="btn btn-success btn-rounded btn-lg">
+              Profil szerkesztése
+            </button>
             <div class="d-flex justify-content-between text-center mt-5 mb-2">
               <div>
                 <p class="mb-2 h5">{{Auth::User()->numberOfGames}}</p>
