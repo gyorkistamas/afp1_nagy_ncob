@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use DB;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\GamePuzzle>
@@ -17,15 +18,8 @@ class GamePuzzleFactory extends Factory
     public function definition()
     {
         return [
-			'puzzle' => $faker->randomNumber(DB::table('puzzles')->count(), false),
+			'hit' => 0,
+			'puzzle_id' => $this->faker->numberBetween(1, DB::table('puzzles')->count()),
         ];
     }
-
-	public function game($id){
-		return $this->state(function($i) use ($id) {
-			return [
-				"game" => $i,
-			];
-		});
-	}
 }

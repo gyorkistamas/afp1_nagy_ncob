@@ -11,7 +11,8 @@ class GameController extends Controller
 {
     public function generate(Request $request)
     {
-		Game::factory()->len((int)$request->post('game_len'))->create();
+		Game::factory()->len(10)->create();
+		//Game::factory()->len((int)$request->post('game_len'))->create();
 		return redirect('/play');
     }
 }
