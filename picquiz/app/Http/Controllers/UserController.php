@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use PhpParser\Node\Expr\FuncCall;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -81,6 +83,61 @@ class UserController extends Controller
     //Show Edit view
     public function edit() {
         return view('users.edit');
+    }
+
+    //Update User
+    public function update(Request $request) {
+        $formFields = $request->validate([
+            'username' => ['required', 'min:3'],
+            'email' => ['required', 'email'],
+        ]);
+
+        $user = User::find(Auth::User()->id);
+
+        
+
+
+        if ($request->get('email') != Auth::User()->email) {
+            $email = $request->validate([
+                'email' => [Rule::unique('users', 'email')]
+            ]);
+            $formFields['email'] = $email;
+        }
+
+        
+
+        if ($request->get('password') != '') {
+            $password = $request->validate([
+                'password' => ['required', 'confirmed', 'min:6']
+            ]);
+
+            $user->password = Hash::make($password['password']);
+        }
+
+
+        if ($request->hasFile('profile_picture')) {
+            if (Auth::User()->profile_picture != "/images/samplePictures/Sample_User_Icon.png") {
+                File::delete(Auth::User()->profile_picture);
+            }
+            $formFields['profile_picture'] = $request->file('profile_picture')->store('images/uploads/users', 'public');
+            $user->profile_picture =  "/storage/" . $formFields['profile_picture'];
+            
+        } 
+
+        if (!$user) {
+            return abort(404);
+        }
+
+        $user->username = $formFields['username'];
+        $user->email = $formFields['email'];
+
+
+
+        $user->save();
+
+        return redirect("/users/edit")->with("message", "Sikeres módosítás!");
+
+
     }
 
 }
