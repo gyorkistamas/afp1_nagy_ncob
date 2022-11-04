@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Contracts\Cache\Store;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use PhpParser\Node\Expr\FuncCall;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -117,12 +119,9 @@ class UserController extends Controller
 
 
         if ($request->hasFile('profile_picture')) {
-            if (Auth::User()->profile_picture != "/images/samplePictures/Sample_User_Icon.png") {
-                File::delete(Auth::User()->profile_picture);
-            }
+            
             $formFields['profile_picture'] = $request->file('profile_picture')->store('images/uploads/users', 'public');
             $user->profile_picture =  "/storage/" . $formFields['profile_picture'];
-            
         } 
 
         if (!$user) {
