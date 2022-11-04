@@ -13,10 +13,6 @@ class FeedbackController extends Controller
     //
 
     public function index() {
-        if (!Auth::check() || Auth::User()->isAdmin != 1) {
-            return abort(401);
-        }
-
         return view('feedbacks.allFeedback', [
             'feedbacks' => Feedback::orderBy('read')->orderByDesc('created_at')->paginate(5)
         ]);
@@ -24,21 +20,10 @@ class FeedbackController extends Controller
 
 
     public function create() {
-        if(Auth::check()) {
-            return view('feedbacks.newFeedback');
-        }
-        else {
-            return redirect('/login');
-        }
+        return view('feedbacks.newFeedback');
     }
 
     public function store(Request $request) {
-
-
-        if(!Auth::check()) {
-            redirect('/login');
-        }
-
         $formFields = $request->validate([
             'title' => ['required', 'min:4'],
             'message' => ['required', 'min:15'],

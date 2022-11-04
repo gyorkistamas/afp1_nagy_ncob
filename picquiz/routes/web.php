@@ -46,16 +46,16 @@ Route::post('/users/update', [UserController::class, 'update'])->middleware('aut
 //--------- Feedback routes ----------------------------------------
 
 //Route to all feedbacks
-Route::get('feedback/all', [FeedbackController::class, 'index']);
+Route::get('feedback/all', [FeedbackController::class, 'index'])->middleware('admin');
 
 //Route to feedback form
-Route::get('/feedback/new', [FeedbackController::class, 'create']);
+Route::get('/feedback/new', [FeedbackController::class, 'create'])->middleware('auth');
 
 //Route to feedback upload
-Route::post('/feedback/new', [FeedbackController::class, 'store']);
+Route::post('/feedback/new', [FeedbackController::class, 'store'])->middleware('auth');
 
 //Route to feedback updateRead
-Route::put('/feedback/all/{id}', [FeedbackController::class, 'update']);
+Route::put('/feedback/all/{id}', [FeedbackController::class, 'update'])->middleware('admin');
 
 
 //--------- Game routes --------------------------------------------
