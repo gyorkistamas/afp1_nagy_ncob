@@ -49,7 +49,7 @@
 					</li>
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="#" class="nav-link navitem mt-2 mt-xl-0"><img
+						<a href="/games/{{Auth::User()->id}}/list" class="nav-link navitem mt-2 mt-xl-0 {{ Request::is('games/*/list') ? 'active' : '' }}"><img
 								src="/images/icons/listAllQuizzes.png">Feladványok</a>
 					</li>
 

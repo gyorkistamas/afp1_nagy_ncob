@@ -24,8 +24,7 @@ class UserController extends Controller
         $formFields = $request->validate([
             'username' => ['required', 'min:3'],
             'email' => ['required', 'email', Rule::unique('users', 'email')],
-            'password' => ['required', 'confirmed', 'min:6'],
-            //'profile_picture' => ['image', 'mimes:jpg,png,jpeg,gif,svg', 'max:2048', 'dimensions:min_width:100,min_height:100,max_width:1000,max_height:1000']
+            'password' => ['required', 'confirmed', 'min:6']
         ]);
         
         if ($request->hasFile('profile_picture')) {
@@ -36,8 +35,6 @@ class UserController extends Controller
         else {
             $formFields['profile_picture'] = "/images/samplePictures/Sample_User_Icon.png";
         }
-
-        //dd($formFields['profile_picture']);
 
         //Hash password:
         $formFields['password'] = bcrypt($formFields['password']);
