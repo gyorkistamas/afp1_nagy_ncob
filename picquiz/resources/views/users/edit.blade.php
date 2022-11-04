@@ -6,6 +6,19 @@
 
 @section('content')
 	<div class="container bg-dark text-white p-4 rounded-3" style="--bs-bg-opacity: .98;">
+
+		@if(session()->has('message'))
+
+		<div class="row">
+			<div class="col-0 col-md-4"></div>
+
+				<div class="col-12 col-md-4 text-white text-center bg-success bg-gradient rounded-3">
+					<h3>{{ session('message') }}</h3>
+				</div>
+		</div>
+
+		@endif
+
 		<form method="POST" action="/users/update" enctype="multipart/form-data">
 			@csrf
 
