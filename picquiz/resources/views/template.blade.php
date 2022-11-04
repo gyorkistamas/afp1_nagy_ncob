@@ -37,14 +37,14 @@
 					</li>
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="/new" class="nav-link navitem mt-2 mt-xl-0"><img
+						<a href="/new" class="nav-link navitem mt-2 mt-xl-0 {{ Request::is('new') ? 'active' : '' }}"><img
 								src="/images/icons/newGameIcon.png">Új játék</a>
 					</li>
 
 					@if (Auth::check() && Auth::User()->isAdmin == 1)
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="#" class="nav-link navitem mt-2 mt-xl-0"><img
+						<a href="/UserList" class="nav-link navitem mt-2 mt-xl-0"><img
 								src="/images/icons/listUsersIcon.png">Felhasználók</a>
 					</li>
 
@@ -90,7 +90,7 @@
 					@if (!Auth::check())
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="/register" class="nav-link navitem {{ Request::is('register') ? 'active' : '' }} mb-2 mb-xl-0"><img src="/images/icons/registerIcon.png">Regisztráció</a>
+						<a href="/register" class="nav-link navitem {{ Request::is('register') ? 'active' : '' }} mb-2 mb-xl-0 mt-3 mt-xl-0"><img src="/images/icons/registerIcon.png">Regisztráció</a>
 					</li>
 
 					<li class="nav-item mt-2 mt-lg-0">
