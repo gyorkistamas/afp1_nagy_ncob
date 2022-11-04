@@ -73,4 +73,9 @@ class UserController extends Controller
         return redirect('/')->with('message', 'Sikeresen kijelentkeztél!');
     }
 
+    //View User:
+    public function view(User $user) {
+        return view('users.view', ['user' => $user]);
+    }
+
 }
