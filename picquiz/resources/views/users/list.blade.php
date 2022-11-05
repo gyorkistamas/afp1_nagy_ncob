@@ -47,12 +47,14 @@
 								<span class="text-danger">Nem</span>
 							@endif
 						</div>
-						<form class="d-inline-block" action="/toggleAdmin" method=post>
-							@csrf
-							<input class="d-none" name=uid value="{{ $user->id }}">
-							<input class="d-none" name=field value="isAdmin">
-							<button class="btn btn-warning">Átváltás</button>
-						</form>
+						@if ( ! (Auth::User()->id == $user->id))
+							<form class="d-inline-block" action="/toggleAdmin" method=post>
+								@csrf
+								<input class="d-none" name=uid value="{{ $user->id }}">
+								<input class="d-none" name=field value="isAdmin">
+								<button class="btn btn-warning">Átváltás</button>
+							</form>
+						@endif
 					</div>
 					<div class="d-flex justify-content-between">
 						<div class="d-inline-block">
