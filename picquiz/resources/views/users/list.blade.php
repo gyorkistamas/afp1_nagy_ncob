@@ -66,10 +66,12 @@
 							@endif
 						</div>
 						<form class="d-inline-block" action="/toggleBan" method=post>
+						@if ( ! (Auth::User()->id == $user->id))
 							@csrf
 							<input class="d-none" name=uid value="{{ $user->id }}">
 							<input class="d-none" name=field value="isBanned">
 							<button class="btn btn-warning">Átváltás</button>
+						@endif
 						</form>
 					</div>
 				</div>
