@@ -150,11 +150,7 @@ class UserController extends Controller
 	}
 
 	private function toggle_field($uid, $field){
-		if(User::where('id', $uid)->get()[0][$field]){
-			$this->set_bool_field($uid, False, $field);
-		}else{
-			$this->set_bool_field($uid, true, $field);
-		}
+			$this->set_bool_field($uid, !User::where('id', $uid)->get()[0][$field], $field);
 	}
 
     private function set_bool_field($uid, $b, $field)
