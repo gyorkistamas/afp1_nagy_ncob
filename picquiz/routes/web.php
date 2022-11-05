@@ -39,21 +39,23 @@ Route::get('/logout', [UserController::class, 'logout']);
 
 //----------------- User routes ---------------------
 Route::get('/users/{userID}/view', [UserController::class, 'view'])->middleware('auth');
+Route::get('/users/edit', [UserController::class, 'edit'])->middleware('auth');
+Route::post('/users/update', [UserController::class, 'update'])->middleware('auth');
 
 
 //--------- Feedback routes ----------------------------------------
 
 //Route to all feedbacks
-Route::get('feedback/all', [FeedbackController::class, 'index']);
+Route::get('feedback/all', [FeedbackController::class, 'index'])->middleware('admin');
 
 //Route to feedback form
-Route::get('/feedback/new', [FeedbackController::class, 'create']);
+Route::get('/feedback/new', [FeedbackController::class, 'create'])->middleware('auth');
 
 //Route to feedback upload
-Route::post('/feedback/new', [FeedbackController::class, 'store']);
+Route::post('/feedback/new', [FeedbackController::class, 'store'])->middleware('auth');
 
 //Route to feedback updateRead
-Route::put('/feedback/all/{id}', [FeedbackController::class, 'update']);
+Route::put('/feedback/all/{id}', [FeedbackController::class, 'update'])->middleware('admin');
 
 
 //--------- Game routes --------------------------------------------
@@ -63,6 +65,8 @@ Route::get('/new', function(){ return view('game/newGame'); });
 Route::post('/generateNewGame', [GameController::class, 'generate']);
 
 Route::get('/play', function(){ return view('game/game'); });
+
+Route::get('/games/{userID}/list', [GameController::class, 'list']);
 
 //--------- Admin routes --------------------------------------------
 

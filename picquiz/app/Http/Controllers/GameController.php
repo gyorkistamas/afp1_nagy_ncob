@@ -2,10 +2,12 @@
  
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Puzzle;
 use App\Models\Game;
+use App\Models\Puzzle;
 use App\Models\GamePuzzle;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
  
 class GameController extends Controller
 {
@@ -14,6 +16,18 @@ class GameController extends Controller
 		Game::factory()->len(10)->create();
 		//Game::factory()->len((int)$request->post('game_len'))->create();
 		return redirect('/play');
+    }
+
+    public function list($userID) {
+      
+      if (!Auth::check()) {
+          return abort(401);
+      }
+
+      $listOfGames = DB::table('games')->get()->where('player', $userID);
+
+      return view('game.gameList', ['Games' => $listOfGames]);
+
     }
 }
 
