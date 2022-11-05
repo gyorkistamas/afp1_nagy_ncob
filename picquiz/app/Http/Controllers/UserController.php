@@ -133,6 +133,7 @@ class UserController extends Controller
         $user->save();
 
         return redirect("/users/edit")->with("message", "Sikeres módosítás!");
+	}
 
 	// ### Modify ###
 
