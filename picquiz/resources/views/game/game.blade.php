@@ -1,14 +1,17 @@
 @extends('template')
 
 @php
-	$debug = True;
+	//$debug = True;
+	$debug = False;
 
-	$answer = 'asd';
-	$pic = 'asd';
+	$answer = $puzzle->answer;
+	$pic = $puzzle->picture;
+
+	if($debug){
+		var_dump($puzzle);
+	}
 
 	$hits = 0;
-	$nth = 1;
-	$per = 10;
 @endphp
 
 @section('title')
@@ -32,7 +35,7 @@
 		<div class="col-12 col-lg-4 d-flex justify-content-center">
 			<img class="col-12" id=qimg
 					src="{{ $pic }}"
-					onerror="this.onerror=null; this.src='images/undefined.jpg'"
+					onerror="this.onerror=null; this.src='/images/undefined.jpg'"
 			>
 			</img>
 		</div>
@@ -56,12 +59,8 @@
 	</div>
 
 
-	<div class="row mt-3" style="font-size: 12px;">
-		Készítette: Karácsony Balázs, Györkis Tamás, Kovács Dávid
-	</div>
-
 	@if ($debug)
-		<span class="text-warning">answer: {{$answer}}<span>
+		<span class="text-warning">answer: {{ $answer }}<span>
 	@endif
 
 </div>

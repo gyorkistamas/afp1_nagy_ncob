@@ -64,7 +64,8 @@ Route::get('/new', function(){ return view('game/newGame'); });
 
 Route::post('/generateNewGame', [GameController::class, 'generate']);
 
-Route::get('/play', function(){ return view('game/game'); });
+Route::get('/play/{id}/{puzzle}', [GameController::class, 'play']);
+
 
 Route::get('/games/{userID}/list', [GameController::class, 'list']);
 

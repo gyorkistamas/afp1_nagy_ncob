@@ -37,8 +37,8 @@ class GameFactory extends Factory
 		// ---
 		// - Because of these lines the factory now
 		//    both unportable and thread unsafe
-		$query = DB::select("select last_insert_id()");
-		$game_id = get_object_vars($query[0])["last_insert_id()"];
+		$query = DB::select("select max(id) m from games");
+		$game_id = get_object_vars($query[0])["m"];
 		// ---
 		foreach($this->GamePuzzles as $i){
 			$i->create(['game_id' => $game_id]);

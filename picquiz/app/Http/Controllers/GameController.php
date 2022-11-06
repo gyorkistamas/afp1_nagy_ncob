@@ -8,15 +8,29 @@ use App\Models\GamePuzzle;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Collection;
  
 class GameController extends Controller
 {
     public function generate(Request $request)
     {
-		Game::factory()->len(10)->create();
-		//Game::factory()->len((int)$request->post('game_len'))->create();
-		return redirect('/play');
+		Game::factory()->len((int)$request->post('game_len'))->create();
+		// ---
+		// - Again, just as with GameFactory this would fail terribly
+		//    if multiple users were to be served at the same time
+		$query = DB::select("select max(id) m from games");
+		$game_id = get_object_vars($query[0])["m"];
+		// ---
+		return redirect('/play/' . 
+							$game_id . '/' .
+							1
+						);
     }
+
+	public function play($id, $puzzle){
+		$p = DB::table('game_puzzles')->join('puzzles', 'game_id', '=', 'puzzles.id')->get()->where('game_id', $id)->values()->get($puzzle);
+		return view('game/game', ['puzzle' => $p, 'nth' => $puzzle, 'per' => DB::table('game_puzzles')->where('game_id', $id)->count()]);
+	}
 
     public function list($userID) {
       
