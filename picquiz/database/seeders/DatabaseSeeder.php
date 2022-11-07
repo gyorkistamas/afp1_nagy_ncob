@@ -28,9 +28,10 @@ class DatabaseSeeder extends Seeder
 
 		$this->call([
 			UserSeeder::class,
-			FeedbackSeeder::class
+			FeedbackSeeder::class,
+			PuzzleSeeder::class,
 		]);
 
-		Puzzle::factory()->count(20)->create();
+		//Puzzle::factory()->count(20)->create();
     }
 }
