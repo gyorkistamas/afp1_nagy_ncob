@@ -23,6 +23,7 @@
 
 <div class="container bg-dark text-white p-4 rounded-3" style="--bs-bg-opacity: .98;">
 
+
 	<div class="row">
 		<div class="col-12 text-center">
 			<h1>Melyik videójáték látható a képen?</h1>
@@ -43,18 +44,20 @@
 		<hr class="mt-2 d-block d-lg-none">
 
 		<div class="col-12 col-lg-8">
-			<div style="display: flex; justify-content: space-between;">
-				<div class=mb-4>
-					<h3>Tipp:</h3>
-					<input placeholder="játék név"></input>
+			<form action={{ dirname($_SERVER["REQUEST_URI"]) . '/' . $nth + 1 }}>
+				<div style="display: flex; justify-content: space-between;">
+					<div class=mb-4>
+						<h3>Tipp:</h3>
+						<input placeholder="játék név"></input>
+					</div>
+					<div style="float: right;">
+						<h4>{{ $nth }}/{{ $per }}</h4>
+						<h4>{{ $hits }} találat</h4>
+					</div>
 				</div>
-				<div style="float: right;">
-					<h4>{{ $nth }}/{{ $per }}</h4>
-					<h4>{{ $hits }} találat</h4>
-				</div>
-			</div>
-			<a class="btn btn-success" href="/play">Beküldés</a>
-			<a class="btn btn-danger" href="/play">Passz</a>
+				<button class="btn btn-success">Beküldés</button>
+				<button class="btn btn-danger">Passz</button>
+			<form>
 		</div>
 	</div>
 
