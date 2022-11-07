@@ -51,7 +51,8 @@
 
 		<div class="col-12 col-lg-8">
 			<h3>A játék lényege:</h3>
-			<p>A játék során képeket fogsz látni játékokból kiemelve. A feladatod, hogy meghatározd a játék címét. A végén kiderül, hogy mennyit találtál el. Ha szeretnéd elmenteni az eredményed, akkor regisztrálj az oldalon!</p>
+			<p>A játék során képeket fogsz látni játékokból kiemelve. A feladatod, hogy meghatározd a játék címét. Kisbetűkkel-nagybetűkkel nem kell törődnöd, sőt speciális karaktereket is kihagyhatod (pl. kettőspont). A végén kiderül, hogy mennyit találtál el.</p>
+			<p>Ha szeretnéd elmenteni az eredményed, akkor regisztrálj az oldalon!</p>
 			<h6>Jó szórakozást kívánunk!</h6>
 			<a class="btn btn-success" href="/new">Új játék indítása</a>
 		</div>
