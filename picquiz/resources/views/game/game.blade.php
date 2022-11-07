@@ -1,8 +1,8 @@
 @extends('template')
 
 @php
-	$debug = True;
-	//$debug = False;
+	//$debug = True;
+	$debug = False;
 
 	$answer = $puzzle->answer;
 	$pic = $puzzle->picture;
@@ -44,20 +44,28 @@
 		<hr class="mt-2 d-block d-lg-none">
 
 		<div class="col-12 col-lg-8">
-			<form action={{ dirname($_SERVER["REQUEST_URI"]) . '/' . $nth + 1 }}>
+			<form method=post
+					action={{ dirname($_SERVER["REQUEST_URI"]) . '/' . $nth . '/validate' }} 
+					id="tippForm"
+					onsubmit="return preguess()"
+			>
+				@csrf
 				<div style="display: flex; justify-content: space-between;">
 					<div class=mb-4>
 						<h3>Tipp:</h3>
-						<input placeholder="játék név"></input>
+						<input id="tipp" placeholder="játék név"></input>
+						<span id=inputErrorPlaceholder class="text-danger"></span>
 					</div>
 					<div style="float: right;">
 						<h4>{{ $nth }}/{{ $per }}</h4>
 						<h4>{{ $hits }} találat</h4>
 					</div>
 				</div>
-				<button class="btn btn-success">Beküldés</button>
+				<button class="btn btn-success mb-2">Beküldés</button>
+			</form>
+			<form action={{ dirname($_SERVER["REQUEST_URI"]) . '/' . $nth + 1 }}>
 				<button class="btn btn-danger">Passz</button>
-			<form>
+			</form>
 		</div>
 	</div>
 
@@ -66,6 +74,18 @@
 		<span class="text-warning">answer: {{ $answer }}<span>
 	@endif
 
+<script>
+	function preguess(){
+		let p = document.getElementById('inputErrorPlaceholder');
+		let t = document.getElementById('tipp');
+		if(t.value == ""){
+			p.innerText = "*Lemaradt a tipped!"
+			return false;
+		}else{
+			return true;
+		}
+	}
+</script>
 </div>
 
 @endsection
