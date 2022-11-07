@@ -10,9 +10,12 @@ for i in "$DIR"/*; do
 	ANS=$(echo "$ANS" | tr [:upper:] [:lower:])
 	ANS=${ANS//_/ }
 	ANS=${ANS//:/}
+	IMG=${i/${DIR}/}
+	IMG="/images/puzzles/${IMG}"
+	IMG=${IMG//\/\//\/}
 	printf "
 		Puzzle::create([
-			'picture' => \"/images/puzzles/${i}\",
+			'picture' => \"${IMG}\",
 			'answer' => \"${ANS}\",
 			'user_added' => 1,
 			'numberOfGames' => 0,
