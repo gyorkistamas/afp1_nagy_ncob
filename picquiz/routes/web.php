@@ -66,6 +66,7 @@ Route::post('/generateNewGame', [GameController::class, 'generate']);
 
 Route::get('/play/{id}/{puzzle}', [GameController::class, 'play']);
 
+Route::post('/play/{id}/{puzzle}/validate', [GameController::class, 'do_validate']);
 
 Route::get('/games/{userID}/list', [GameController::class, 'list']);
 

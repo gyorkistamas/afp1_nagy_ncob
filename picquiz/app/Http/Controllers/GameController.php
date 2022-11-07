@@ -40,6 +40,20 @@ class GameController extends Controller
 		);
 	}
 
+	private function to_answer_format($str){
+		$str = str_replace(['_', ':'], [' '], strtolower($str));
+		return $str;
+	}
+
+	public function do_validate(Request $request, $id, $puzzle){ // this function cannot be called just "validate" cause that conflicts with Laravel definitions
+		$p = DB::table('game_puzzles')->join('puzzles', 'puzzle_id', '=', 'puzzles.id')->get()->where('game_id', $id)->values()->get($puzzle-1);
+		if($this->to_answer_format($request->tipp) == $this->to_answer_format($p->answer)){
+			$i = DB::table('game_puzzles')->get()->where('game_id', $id)->values()->get($puzzle-1)->id;
+			DB::table('game_puzzles')->where('id', $i)->update(['hit' => 1]);
+		}
+		return redirect("/play/" . $id . '/' . ($puzzle+1));
+	}
+
     public function list($userID) {
       
       if (!Auth::check()) {

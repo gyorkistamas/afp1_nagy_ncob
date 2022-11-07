@@ -1,8 +1,8 @@
 @extends('template')
 
 @php
-	//$debug = True;
-	$debug = False;
+	$debug = True;
+	//$debug = False;
 
 	$answer = $puzzle->answer;
 	$pic = $puzzle->picture;
@@ -53,7 +53,7 @@
 				<div style="display: flex; justify-content: space-between;">
 					<div class=mb-4>
 						<h3>Tipp:</h3>
-						<input id="tipp" placeholder="játék név"></input>
+						<input id="tipp" name="tipp" placeholder="játék név"></input>
 						<span id=inputErrorPlaceholder class="text-danger"></span>
 					</div>
 					<div style="float: right;">
