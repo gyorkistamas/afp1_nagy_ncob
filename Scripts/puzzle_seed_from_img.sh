@@ -12,7 +12,7 @@ for i in "$DIR"/*; do
 	ANS=${ANS//:/}
 	printf "
 		Puzzle::create([
-			'picture' => \"images/puzzles/${i}\",
+			'picture' => \"/images/puzzles/${i}\",
 			'answer' => \"${ANS}\",
 			'user_added' => 1,
 			'numberOfGames' => 0,
