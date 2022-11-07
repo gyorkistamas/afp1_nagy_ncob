@@ -35,7 +35,8 @@ class GameController extends Controller
 		return view('game/game',
 					['puzzle' => $p,
 						'nth' => $puzzle,
-						'per' => DB::table('game_puzzles')->where('game_id', $id)->count()
+						'per' => DB::table('game_puzzles')->where('game_id', $id)->count(),
+						'hits' => DB::table('game_puzzles')->where('game_id', $id)->where('hit', 1)->count(),
 					]
 		);
 	}

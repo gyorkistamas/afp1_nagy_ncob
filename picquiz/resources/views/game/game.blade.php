@@ -10,8 +10,6 @@
 	if($debug){
 		var_dump($puzzle);
 	}
-
-	$hits = 0;
 @endphp
 
 @section('title')
