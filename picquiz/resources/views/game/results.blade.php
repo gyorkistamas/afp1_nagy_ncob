@@ -15,7 +15,7 @@
 					$i = 1;
 					foreach($puzzles as $p):
 				@endphp
-					<div class="col m-1">
+					<div class="col-3">
 						<div
 							class="
 									border border-6 rounded
