@@ -16,13 +16,16 @@
 					foreach($puzzles as $p):
 				@endphp
 					<div class="col m-1">
-						<div class="
+						<div
+							class="
 									border border-6 rounded
 									{{ $p->hit ? "border-success bg-success" : "border-danger bg-danger" }}
 									p-2
 								"
+							style="height: 100%;"
 						>
-							<h6>{{ $i }}&#41; {{ ucwords($p->answer) }}</h6>
+							<h5>{{ $i }}&#41; {{ ucwords($p->answer) }}</h5>
+							<span class=mb-2>{{ $p->hit ? "Helyes válasz!" : "Nem talált!" }}</span>
 							<img class="col-12 border border-2 border-dark"
 									src="{{ $p->picture }}"
 									onerror="this.onerror=null; this.src='/images/undefined.jpg'"
