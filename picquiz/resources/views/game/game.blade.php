@@ -7,6 +7,8 @@
 	$answer = $puzzle->answer;
 	$pic = $puzzle->picture;
 
+	$validation_url = dirname($_SERVER["REQUEST_URI"]) . '/' . $nth . '/validate';
+
 	if($debug){
 		var_dump($puzzle);
 	}
@@ -43,7 +45,7 @@
 
 		<div class="col-12 col-lg-8">
 			<form method=post
-					action={{ dirname($_SERVER["REQUEST_URI"]) . '/' . $nth . '/validate' }} 
+					action={{ $validation_url }} 
 					id="tippForm"
 					onsubmit="return preguess()"
 			>
@@ -61,7 +63,11 @@
 				</div>
 				<button class="btn btn-success mb-2">Beküldés</button>
 			</form>
-			<form action={{ dirname($_SERVER["REQUEST_URI"]) . '/' . $nth + 1 }}>
+			<form method=post
+					action={{ $validation_url }}
+			>
+				@csrf
+				<input name="tipp" class="d-none" value=""></input>
 				<button class="btn btn-danger">Passz</button>
 			</form>
 		</div>

@@ -68,6 +68,8 @@ Route::get('/play/{id}/{puzzle}', [GameController::class, 'play']);
 
 Route::post('/play/{id}/{puzzle}/validate', [GameController::class, 'do_validate']);
 
+Route::get('/results/{id}', [GameController::class, 'summarize']);
+
 Route::get('/games/{userID}/list', [GameController::class, 'list']);
 
 //--------- Admin routes --------------------------------------------

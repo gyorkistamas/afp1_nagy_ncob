@@ -52,7 +52,16 @@ class GameController extends Controller
 			$i = DB::table('game_puzzles')->get()->where('game_id', $id)->values()->get($puzzle-1)->id;
 			DB::table('game_puzzles')->where('id', $i)->update(['hit' => 1]);
 		}
-		return redirect("/play/" . $id . '/' . ($puzzle+1));
+		if($puzzle < DB::table('game_puzzles')->where('game_id', $id)->count()){
+			return redirect("/play/" . $id . '/' . ($puzzle+1));
+		}else{
+			return redirect("/results/" . $id);
+		}
+	}
+
+    public function summarize($id){
+		$puzzles = DB::table('game_puzzles')->where('game_id', $id)->get();
+		return view('game/results', ['puzzles' => $puzzles]);
 	}
 
     public function list($userID) {
