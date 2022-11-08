@@ -13,13 +13,13 @@ return [
     |
     */
 
-    'accepted' => 'The :attribute must be accepted.',
-    'accepted_if' => 'The :attribute must be accepted when :other is :value.',
-    'active_url' => 'The :attribute is not a valid URL.',
-    'after' => 'The :attribute must be a date after :date.',
-    'after_or_equal' => 'The :attribute must be a date after or equal to :date.',
-    'alpha' => 'The :attribute must only contain letters.',
-    'alpha_dash' => 'The :attribute must only contain letters, numbers, dashes and underscores.',
+    'accepted' => 'A következőt muszáj elfogadnia: :attribute.',
+    'accepted_if' => 'A(z) :attribute -t muszáj elfogadnia ha a(z) :other értéke: :value.',
+    'active_url' => 'A(z) :attribute értéke nem egy helyes URL.',
+    'after' => 'A(z) :attribute értékének a(z) :date dátum után kell lennie.',
+    'after_or_equal' => 'A(z) :attribute értékének a(z) :date dátummal egyenlőnek vagy után kell lennie.',
+    'alpha' => 'A(z) :attribute mező csak betűket tartalmazhat.',
+    'alpha_dash' => 'A(z) :attribute mező csak  betűket, számokat, kötőjeleket és alávonásokat tartalmazhat.',
     'alpha_num' => 'The :attribute must only contain letters and numbers.',
     'array' => 'The :attribute must be an array.',
     'before' => 'The :attribute must be a date before :date.',
