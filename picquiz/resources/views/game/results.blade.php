@@ -18,7 +18,7 @@
 						p-2
 						"
 			>
-				<h6>{{ $i }}&#41; {{ $p->answer }}</h6>
+				<h6>{{ $i }}&#41; {{ ucwords($p->answer) }}</h6>
 				<img class="col-12 border border-2 border-dark"
 						src="{{ $p->picture }}"
 						onerror="this.onerror=null; this.src='/images/undefined.jpg'"
