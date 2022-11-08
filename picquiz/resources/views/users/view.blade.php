@@ -7,7 +7,7 @@
 @section('content')
 
 <section class="vh-100">
-  <div class="container py-5 h-100">
+  <div class="container h-70">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-12 col-xl-4">
 
@@ -18,7 +18,7 @@
                 class="rounded-circle img-fluid" style="width: 100px;" />
             </div>
             <h4 class="mb-2">{{Auth::User()->username}}</h4>
-            <p class="text-white mb-4">{{Auth::User()->isAdmin == 1 ? '@Adminisztrátor' : '@Felhasználó'}} <span class="mx-2">|</span> 
+            <p class="text-white mb-4">{{Auth::User()->isAdmin == 1 ? '@Adminisztrátor' : '@Felhasználó'}} <span class="mx-2">|</span>
                 <a href="#!">{{Auth::User()->email}}</a>
             </p>
 
