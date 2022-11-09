@@ -70,7 +70,7 @@ Route::post('/play/{id}/{puzzle}/validate', [GameController::class, 'do_validate
 
 Route::get('/results/{id}', [GameController::class, 'summarize']);
 
-Route::get('/games/{userID}/list', [GameController::class, 'list']);
+Route::get('/games/list', [GameController::class, 'list'])->middleware('admin');
 
 //--------- Admin routes --------------------------------------------
 
