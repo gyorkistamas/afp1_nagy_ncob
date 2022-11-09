@@ -5,10 +5,14 @@
 @endsection
 
 @section('content')
-<!--{{ var_dump($puzzles); }}-->
 <div class="container bg-dark text-white p-4 rounded-3" style="--bs-bg-opacity: .98;">
 	<h1>Eredmények:</h1>
-	<hr class="p-4">
+	<div class="ps-3">
+		<h4>Játékos: {{ $puzzles[0]->username }}</h4>
+		<h4>Ekkor: {{ $puzzles[0]->created_at }}</h4>
+		<h4>Találatok: {{ $hits . '/' . count($puzzles) }}</h4>
+	</div>
+	<hr class="p-2">
 		<div class="container">
 			<div class="row g-4">
 				@php
@@ -40,4 +44,5 @@
 			</div>
 		</div>
 </div>
+<!--{{ var_dump($puzzles); }}-->
 @endsection

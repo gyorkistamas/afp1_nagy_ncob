@@ -60,8 +60,13 @@ class GameController extends Controller
 	}
 
     public function summarize($id){
-		$puzzles = DB::table('game_puzzles')->join('puzzles', 'puzzle_id', '=', 'puzzles.id')->get()->where('game_id', $id);
-		return view('game/results', ['puzzles' => $puzzles]);
+		$puzzles = DB::table('game_puzzles')
+						->join('puzzles', 'puzzle_id', '=', 'puzzles.id')
+						->join('games', 'game_id', '=', 'games.id')
+						->join('users', 'player', '=', 'users.id')
+						->where('game_id', $id)->get();
+		$c = count(DB::table('game_puzzles')->where('game_id', $id)->where('hit', '!=', 0)->get());
+		return view('game/results', ['puzzles' => $puzzles, 'hits' => $c ]);
 	}
 
     public function list($userID) {
