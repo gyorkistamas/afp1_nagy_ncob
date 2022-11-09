@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -26,12 +27,12 @@ class UserController extends Controller
             'email' => ['required', 'email', Rule::unique('users', 'email')],
             'password' => ['required', 'confirmed', 'min:6']
         ]);
-        
+
         if ($request->hasFile('profile_picture')) {
             $formFields['profile_picture'] = $request->file('profile_picture')->store('images/uploads/users', 'public');
             $formFields['profile_picture'] = '/storage/'.$formFields['profile_picture'];
-            
-        }   
+
+        }
         else {
             $formFields['profile_picture'] = "/images/samplePictures/Sample_User_Icon.png";
         }
@@ -76,8 +77,13 @@ class UserController extends Controller
     }
 
     //View User:
-    public function view() {
-        return view('users.view');
+    public function view($userID) {
+
+        $User = User::findOrFail($userID);
+
+        return view('users.view', [
+            'User' => $User
+        ]);
     }
 
     //Show Edit view
@@ -94,7 +100,7 @@ class UserController extends Controller
 
         $user = User::find(Auth::User()->id);
 
-        
+
 
 
         if ($request->get('email') != Auth::User()->email) {
@@ -104,7 +110,7 @@ class UserController extends Controller
             $formFields['email'] = $email;
         }
 
-        
+
 
         if ($request->get('password') != '') {
             $password = $request->validate([
@@ -116,10 +122,10 @@ class UserController extends Controller
 
 
         if ($request->hasFile('profile_picture')) {
-            
+
             $formFields['profile_picture'] = $request->file('profile_picture')->store('images/uploads/users', 'public');
             $user->profile_picture =  "/storage/" . $formFields['profile_picture'];
-        } 
+        }
 
         if (!$user) {
             return abort(404);

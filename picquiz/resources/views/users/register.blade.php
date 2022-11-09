@@ -31,15 +31,15 @@
 
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      
-                      <input 
-                        type="file" 
-                        name="profile_picture" 
-                        id="profilePictureInput" 
-                        accept="image/*" 
+
+                      <input
+                        type="file"
+                        name="profile_picture"
+                        id="profilePictureInput"
+                        accept="image/*"
                         class="form-control"
                       >
-                      
+
                     </div>
 
                   </div>
@@ -48,16 +48,16 @@
 
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
-                      
+
                       <label class="form-label" for="profilePictureInput">Profilkép:</label>
-                      <img 
-                        id="displayProfilePicture" 
-                        src="{{ asset('images/samplePictures/Sample_User_Icon.png') }}" 
-                        style="width: 60%; height: 60%; display: block; margin-left: auto; margin-right: auto;" 
-                        alt="Nincs beállítva" 
+                      <img
+                        id="displayProfilePicture"
+                        src="{{ asset('images/samplePictures/Sample_User_Icon.png') }}"
+                        style="width: 60%; height: 60%; display: block; margin-left: auto; margin-right: auto;"
+                        alt="Nincs beállítva"
                         title="Profilkép"
                       >
-                     
+
                     </div>
 
                   </div>
@@ -154,7 +154,7 @@
 
                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                  <img src={{ asset('images/samplePictures/reg_pic.jpg') }}
                   class="img-fluid" alt="Sample image">
 
                 </div>
