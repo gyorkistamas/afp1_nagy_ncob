@@ -60,7 +60,7 @@ Route::put('/feedback/all/{id}', [FeedbackController::class, 'update'])->middlew
 
 //--------- Game routes --------------------------------------------
 
-Route::get('/new', function(){ return view('game/newGame'); });
+Route::get('/new', [GameController::class, '_new']);
 
 Route::post('/generateNewGame', [GameController::class, 'generate']);
 

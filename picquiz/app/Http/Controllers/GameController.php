@@ -12,9 +12,18 @@ use Illuminate\Support\Collection;
  
 class GameController extends Controller
 {
+	public function _new(){
+		$max_puzzles = (get_object_vars(DB::select('select count(*) c from puzzles')[0]))["c"];
+		return view('game/newGame', ['max' => $max_puzzles]);
+	}
+
     public function generate(Request $request)
     {
-		Game::factory()->len((int)$request->post('game_len'))->create();
+		$glen = (int)$request->post('game_len');
+		if(get_object_vars(DB::select('select count(*) c from puzzles')[0])["c"] < $glen){
+			return abort(419);
+		}
+		Game::factory()->len($glen)->create();
 		// ---
 		// - Again, just as with GameFactory this would fail terribly
 		//    if multiple users were to be served at the same time
