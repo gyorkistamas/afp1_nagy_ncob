@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="container bg-dark text-white p-4 rounded-3" style="--bs-bg-opacity: .98;">
+<div class="container bg-dark text-white p-4 rounded-3 mb-4" style="--bs-bg-opacity: .98;">
 	<h1>Eredmények:</h1>
 	<div class="ps-3">
 		<h4>Játékos: {{ $puzzles[0]->username }}</h4>
