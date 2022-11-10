@@ -51,8 +51,7 @@ class Handler extends ExceptionHandler
 
 
         $this->renderable(function (PostTooLargeException $e) {
-            session()->flash('toobig', 'A feltöltött fájl mérete túl nagy!');
-            return redirect()->back();
+            return redirect()->route('editerror');
         });
     }
 }

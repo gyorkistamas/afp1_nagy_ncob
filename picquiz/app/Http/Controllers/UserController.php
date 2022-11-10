@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Game;
 use Illuminate\Contracts\Cache\Store;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;
@@ -88,6 +89,11 @@ class UserController extends Controller
 
     //Show Edit view
     public function edit() {
+        return view('users.edit');
+    }
+
+    public function editError() {
+        session()->flash("error", "Hiba a fájl feltöltése során!");
         return view('users.edit');
     }
 

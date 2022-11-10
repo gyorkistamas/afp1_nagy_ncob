@@ -40,6 +40,7 @@ Route::get('/logout', [UserController::class, 'logout']);
 //----------------- User routes ---------------------
 Route::get('/users/{userID}/view', [UserController::class, 'view'])->middleware('auth');
 Route::get('/users/edit', [UserController::class, 'edit'])->middleware('auth');
+Route::get('/users/edit/error', [UserController::class, 'editError'])->middleware('auth')->name('editerror');
 Route::post('/users/update', [UserController::class, 'update'])->middleware('auth');
 
 
