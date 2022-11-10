@@ -13,9 +13,9 @@
         @else
             <h1 class="text-center">Feladványok:</h1>
             @foreach($Puzzles as $puzzle)
-                <div class="card text-bg-dark mb-4 border border-5" style="max-width: 20rem;">
+                <div class="card text-bg-dark mb-4 border border-5 border-success" style="max-width: 20rem;">
                     <div class="card-header">
-                        <span class="badge bg-danger">Létrehozva: {{ $puzzle->created_at }}</span>
+                        <span class="badge bg-success">Létrehozva: {{ $puzzle->created_at }}</span>
                     </div>
                     <img src={{ asset($puzzle->picture) }} class="card-img-top" alt="...">
                     <div class="card-body">
