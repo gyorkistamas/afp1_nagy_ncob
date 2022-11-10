@@ -3,15 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Game;
 use Illuminate\Contracts\Cache\Store;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use PhpParser\Node\Expr\FuncCall;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -80,9 +78,11 @@ class UserController extends Controller
     public function view($userID) {
 
         $User = User::findOrFail($userID);
+        $GamesPlayedByUser = Game::where('player', $userID)->orderByDesc('id')->paginate(3);
 
         return view('users.view', [
-            'User' => $User
+            'User' => $User,
+            'GamesPlayedByUser' => $GamesPlayedByUser
         ]);
     }
 

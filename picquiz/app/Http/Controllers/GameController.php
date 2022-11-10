@@ -1,5 +1,5 @@
 <?php
- 
+
 namespace App\Http\Controllers;
 
 use App\Models\Game;
@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Collection;
- 
+
 class GameController extends Controller
 {
 	public function _new(){
@@ -30,7 +30,7 @@ class GameController extends Controller
 		$query = DB::select("select max(id) m from games");
 		$game_id = get_object_vars($query[0])["m"];
 		// ---
-		return redirect('/play/' . 
+		return redirect('/play/' .
 							$game_id . '/' .
 							1
 						);
@@ -78,15 +78,20 @@ class GameController extends Controller
 		return view('game/results', ['puzzles' => $puzzles, 'hits' => $c ]);
 	}
 
-    public function list($userID) {
-      
-      if (!Auth::check()) {
-          return abort(401);
-      }
+    public function list() {
 
-      $listOfGames = DB::table('games')->get()->where('player', $userID);
+      $listOfPuzzles = Puzzle::select('puzzles.id',
+                                    'puzzles.created_at',
+                                    'puzzles.updated_at',
+                                    'puzzles.picture',
+                                    'puzzles.answer',
+                                    'puzzles.numberOfHits',
+                                    'puzzles.numberOfGames',
+                                    'users.username')
+                                ->join('users', 'users.id', '=', 'puzzles.user_added')
+                                ->paginate(6);
 
-      return view('game.gameList', ['Games' => $listOfGames]);
+      return view('game.puzzleList', ['Puzzles' => $listOfPuzzles]);
 
     }
 }

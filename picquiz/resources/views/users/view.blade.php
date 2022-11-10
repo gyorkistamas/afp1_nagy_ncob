@@ -2,7 +2,7 @@
 
 @section('title')
 {{-- {{ Str::title($User->username) }} --}}
-<title>Felhasználó megtekintése</title>
+<title>{{ Str::title($User->username) }} megtekintése</title>
 @endsection
 
 @section('content')
@@ -51,6 +51,28 @@
         </div>
 
       </div>
+
+      <div class="col-md-12 col-xl-4">
+
+        <div class="card bg-dark text-white" style="border-radius: 15px;">
+          <div class="card-body text-center">
+            <h3 class="mb-2">Korábbi játszmák:</h3>
+
+            @if ( count($GamesPlayedByUser) == 0 )
+                <h4 class="mb-2">Még nem játszott egy játékot sem!</h4>
+            @else
+                @foreach ($GamesPlayedByUser as $gpbu)
+                    <div class="border border-info">
+                        <h5 class="mb-2">Befejezés időpontja: {{ $gpbu->created_at }}</h5>
+                        <h5 class="mb-2">Találatok száma: {{ $gpbu->numberOfHits }}</h5>
+                    </div>
+                @endforeach
+            @endif
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </div>
 </section>

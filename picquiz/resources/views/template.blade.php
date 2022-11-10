@@ -49,12 +49,12 @@
 					</li>
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="/games/{{Auth::User()->id}}/list" class="nav-link navitem mt-2 mt-xl-0 {{ Request::is('games/*/list') ? 'active' : '' }}"><img
+						<a href="/games/list" class="nav-link navitem mt-2 mt-xl-0 {{ Request::is('games/list') ? 'active' : '' }}"><img
 								src="/images/icons/listAllQuizzes.png">Feladványok</a>
 					</li>
 
 					@endif
-					
+
 					@if (Auth::check() && Auth::User()->isAdmin != 1)
 
 					<li class="nav-item mt-2 mt-lg-0">
