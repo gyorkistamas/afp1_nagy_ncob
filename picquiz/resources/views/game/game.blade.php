@@ -1,8 +1,8 @@
 @extends('template')
 
 @php
-	$debug = True;
-	//$debug = False;
+	//$debug = True;
+	$debug = False;
 
 	$answer = $puzzle->answer;
 	$pic = $puzzle->picture;
