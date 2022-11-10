@@ -44,7 +44,7 @@
 					@if (Auth::check() && Auth::User()->isAdmin == 1)
 
 					<li class="nav-item mt-2 mt-lg-0">
-						<a href="/UserList" class="nav-link navitem mt-2 mt-xl-0"><img
+						<a href="/UserList" class="nav-link navitem mt-2 mt-xl-0 {{ Request::is('UserList') ? 'active' : '' }}"><img
 								src="/images/icons/listUsersIcon.png">Felhasználók</a>
 					</li>
 
