@@ -37,6 +37,10 @@ class GameController extends Controller
     }
 
 	public function play($id, $puzzle){
+		$puzzle = (int)$puzzle;
+		if($puzzle == 0){
+			abort(404);
+		}
 		$p = DB::table('game_puzzles')->join('puzzles', 'puzzle_id', '=', 'puzzles.id')->get()->where('game_id', $id)->values()->get($puzzle-1);
 		if($p == NULL){
 			return abort(404);
