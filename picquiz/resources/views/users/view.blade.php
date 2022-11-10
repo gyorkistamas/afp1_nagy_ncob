@@ -57,17 +57,22 @@
         <div class="card bg-dark text-white" style="border-radius: 15px;">
           <div class="card-body text-center">
             <h3 class="mb-2">Korábbi játszmák:</h3>
-
-            @if ( count($GamesPlayedByUser) == 0 )
-                <h4 class="mb-2">Még nem játszott egy játékot sem!</h4>
-            @else
-                @foreach ($GamesPlayedByUser as $gpbu)
-                    <div class="border border-info">
-                        <h5 class="mb-2">Befejezés időpontja: {{ $gpbu->created_at }}</h5>
-                        <h5 class="mb-2">Találatok száma: {{ $gpbu->numberOfHits }}</h5>
-                    </div>
-                @endforeach
-            @endif
+                <div class="row gap-2">
+                    @if ( count($GamesPlayedByUser) == 0 )
+                        <h4 class="mb-2">Még nem játszott egy játékot sem!</h4>
+                    @else
+                        @foreach ($GamesPlayedByUser as $gpbu)
+                            <div class="card bg-dark border border-5 border-info">
+                                <div class="card-header">
+                                    <h5 class="mb-2">Befejezés időpontja: {{ $gpbu->created_at }}</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="mb-2">Találatok száma: {{ $gpbu->numberOfHits }}</h5>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
+                </div>
           </div>
         </div>
 
