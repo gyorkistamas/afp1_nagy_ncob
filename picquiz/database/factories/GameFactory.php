@@ -26,9 +26,6 @@ class GameFactory extends Factory
 
 	public function len(?int $l){
 		$this->lenght = $l;
-		for($i = 0; $i < $l; $i++){
-			array_push($this->GamePuzzles, GamePuzzle::factory());
-		}
         return $this;
 	}
 
@@ -40,8 +37,12 @@ class GameFactory extends Factory
 		$query = DB::select("select max(id) m from games");
 		$game_id = get_object_vars($query[0])["m"];
 		// ---
-		foreach($this->GamePuzzles as $i){
-			$i->create(['game_id' => $game_id]);
+		$max_puzzles = (get_object_vars(DB::select('select count(*) c from puzzles')[0]))["c"];
+		$arr = range(1, $max_puzzles);
+		shuffle($arr);
+		$arr = array_slice($arr, -($this->lenght));
+		foreach($arr as $i){
+			GamePuzzle::factory()->create(['game_id' => $game_id, 'puzzle_id' => $i]);
 		}
 	}
 
