@@ -133,13 +133,13 @@ return [
         'numeric' => 'A(z) :attribute számnak ekkorának kell lennie: :size.',
         'string' => 'A(z) :attribute mezőnek :size karakternek kell lennie.',
     ],
-    'starts_with' => 'The :attribute must start with one of the following: :values.',
-    'string' => 'The :attribute must be a string.',
-    'timezone' => 'The :attribute must be a valid timezone.',
-    'unique' => 'The :attribute has already been taken.',
-    'uploaded' => 'The :attribute failed to upload.',
-    'url' => 'The :attribute must be a valid URL.',
-    'uuid' => 'The :attribute must be a valid UUID.',
+    'starts_with' => 'A(z) :attribute ezen valamelyikével kell kezdődnie: :values.',
+    'string' => 'A(z) :attribute mezőnek szövegnek kell lennie.',
+    'timezone' => 'A(z) :attribute értékének egy helyes időzónának kell lennie.',
+    'unique' => 'A(z) :attribute értéke már foglalt.',
+    'uploaded' => 'A(z) :attribute feltöltése sikertelen volt.',
+    'url' => 'A(z) :attribute értékének egy helyes URL címnek kell lennie.',
+    'uuid' => 'A(z) :attribute értékének egy helyes UUID-nak kell lennie.',
 
     /*
     |--------------------------------------------------------------------------
