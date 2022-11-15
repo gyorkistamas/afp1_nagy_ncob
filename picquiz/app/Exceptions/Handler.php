@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Http\Exceptions\PostTooLargeException;
 use Illuminate\Support\Facades\Redirect;
@@ -52,6 +53,10 @@ class Handler extends ExceptionHandler
 
         $this->renderable(function (PostTooLargeException $e) {
             return redirect()->route('editerror');
+        });
+
+        $this->renderable(function (QueryException $e) {
+            return response()->view('errors.database');
         });
     }
 }
