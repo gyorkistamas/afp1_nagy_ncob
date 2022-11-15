@@ -19,7 +19,7 @@ class IsAdmin
     {
 
         if (!Auth::check()) {
-            return route('login');
+            return redirect('/login');
         }
 
         if (Auth::User()->isAdmin != '1') {
