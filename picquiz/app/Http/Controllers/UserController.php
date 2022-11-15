@@ -56,6 +56,16 @@ class UserController extends Controller
             'password' => ['required']
         ]);
 
+        $email = $formFields['email'];
+
+        $User = User::where('email', $email)->first();
+
+        $isBanned = $User->isBanned == 1 ? true : false;
+
+        if ($isBanned) {
+            return back()->withErrors(['email' => 'Ez a felhasználó kitiltásra került korábban!'])->onlyInput('email');
+        }
+
         if (auth()->attempt($formFields)) {
 
             $request->session()->regenerate();
