@@ -5,7 +5,6 @@
 ### Tesztelésre használt környezet:
 - Editor: Visual Studio Code
 - Böngésző: Microsoft Edge
-- Hotel: Trivago
 
 Ebbe a fájlba kerülnek feljegyzésre a projekt tesztelése alatt felmerülő esetek.
 A tesztek három nagy csoportra lesznek osztva utalva a projekt verziójára (Alfa, Béta, Végleges).
