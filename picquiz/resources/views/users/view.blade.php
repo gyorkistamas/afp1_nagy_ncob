@@ -67,7 +67,8 @@
                                     <h5 class="mb-2">Befejezés időpontja: {{ $gpbu->created_at }}</h5>
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="mb-2">Találatok száma: {{ $gpbu->numberOfHits }}</h5>
+
+                                    <h5 class="mb-2">Találatok száma: Nincs adat {{-- {{ $gpbu->numberOfHits }} --}}</h5>
                                 </div>
                             </div>
                         @endforeach
