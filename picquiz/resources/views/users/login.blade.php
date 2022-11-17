@@ -38,7 +38,7 @@
                                                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                                             @enderror
 
-                                            <label class="form-label" for="email">Email Cím:</label>
+                                            <label class="form-label" for="email">Email Cím</label>
 
                                         </div>
 
@@ -55,7 +55,7 @@
                                                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                                             @enderror
 
-                                            <label class="form-label" for="password">Jelszó:</label>
+                                            <label class="form-label" for="password">Jelszó</label>
 
                                         </div>
 
@@ -77,7 +77,6 @@
                             </div>
 
                             <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                                <!--src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"-->
                                 <img src= {{ asset('images/samplePictures/login_pic.jpg') }}
                                 class="img-fluid" alt="Sample image">
 
