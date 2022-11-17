@@ -24,6 +24,14 @@ class UserSeeder extends Seeder
 		//]);
 
         User::create([
+            'username' => 'Anonymous',
+            'email' => 'N/A',
+            'password' => "",
+            'profile_picture' => '/images/undefined.jpg',
+            'isAdmin' => '1'
+        ]);
+
+        User::create([
             'username' => 'admin',
             'email' => 'admin@ncob.com',
             'password' => Hash::make('admin'),
