@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->unsignedBigInteger('player');
-            $table->integer('numberOfHits');
             $table->foreign('player')->references('id')->on('users');
         });
     }
