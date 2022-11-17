@@ -60,16 +60,20 @@ class UserController extends Controller
 
         $User = User::where('email', $email)->first();
 
-        $isBanned = $User->isBanned == 1 ? true : false;
-
-        if ($isBanned) {
-            return back()->withErrors(['email' => 'Ez a felhasználó kitiltásra került korábban!'])->onlyInput('email');
+        if ($User) {
+            $isBanned = $User->isBanned == 1 ? true : false;
         }
 
         if (auth()->attempt($formFields)) {
 
-            $request->session()->regenerate();
-            return redirect('/')->with('message', 'Sikeresen bejelentkeztél!');
+            if ($isBanned) {
+                return back()->withErrors(['email' => 'Ez a felhasználó kitiltásra került korábban!'])->onlyInput('email');
+            }
+            else {
+                $request->session()->regenerate();
+                return redirect('/')->with('message', 'Sikeresen bejelentkeztél!');
+            }
+
         }
 
         return back()->withErrors(['email' => 'Hibás adatmegadás!'])->onlyInput('email');
