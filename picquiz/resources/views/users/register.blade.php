@@ -49,7 +49,7 @@
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
 
-                      <label class="form-label" for="profilePictureInput">Profilkép:</label>
+                      <label class="form-label" for="profilePictureInput">Profilkép</label>
                       <img
                         id="displayProfilePicture"
                         src="{{ asset('images/samplePictures/Sample_User_Icon.png') }}"
@@ -73,7 +73,7 @@
                         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                       @enderror
 
-                      <label class="form-label" for="username">Felhasználónév:</label>
+                      <label class="form-label" for="username">Felhasználónév</label>
 
                     </div>
 
@@ -90,7 +90,7 @@
                         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                       @enderror
 
-                      <label class="form-label" for="email">Email Cím:</label>
+                      <label class="form-label" for="email">Email Cím</label>
 
                     </div>
 
@@ -107,7 +107,7 @@
                         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                       @enderror
 
-                      <label class="form-label" for="password">Jelszó:</label>
+                      <label class="form-label" for="password">Jelszó</label>
 
                     </div>
 
@@ -124,18 +124,11 @@
                         <p class="text-red-500 text-xs mt-1">{{$message}}</p>
                       @enderror
 
-                      <label class="form-label" for="password_confirmation">Jelszó megerősítése:</label>
+                      <label class="form-label" for="password_confirmation">Jelszó megerősítése</label>
 
                     </div>
 
                   </div>
-
-                  <!--<div class="form-check d-flex justify-content-center mb-5">
-                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                    <label class="form-check-label" for="form2Example3">
-                      I agree all statements in <a href="#!">Terms of service</a>
-                    </label>
-                  </div>-->
 
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <input type="submit" name="submitBtn" class="btn btn-success btn-lg" value="Regisztrálok">
