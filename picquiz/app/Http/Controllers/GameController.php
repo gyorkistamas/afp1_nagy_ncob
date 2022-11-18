@@ -23,15 +23,21 @@ class GameController extends Controller
 		if(get_object_vars(DB::select('select count(*) c from puzzles')[0])["c"] < $glen){
 			return abort(419);
 		}
-		Game::factory()->len($glen)->create();
-		// ---
-		// - Again, just as with GameFactory this would fail terribly
-		//    if multiple users were to be served at the same time
-		$query = DB::select("select max(id) m from games");
-		$game_id = get_object_vars($query[0])["m"];
-		// ---
+		if(Auth::User() == NULL){
+			$uid = 1;
+		}else{
+			$uid = Auth::User()->id;
+		}
+		$game = Game::factory()->create(['player' => $uid]);
+		$max_puzzles = (get_object_vars(DB::select('select count(*) c from puzzles')[0]))["c"];
+		$arr = range(1, $max_puzzles);
+		shuffle($arr);
+		$arr = array_slice($arr, -($glen));
+		foreach($arr as $i){
+			GamePuzzle::factory()->create(['game_id' => $game->id, 'puzzle_id' => $i]);
+		}
 		return redirect('/play/' .
-							$game_id . '/' .
+							$game->id . '/' .
 							1
 						);
     }
