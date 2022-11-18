@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="card-body">
 
-                                    <h5 class="mb-2">Találatok száma: Nincs adat {{-- {{ $gpbu->numberOfHits }} --}}</h5>
+                                    <h5 class="mb-2">Találatok száma: {{ $gpbu->hit }}</h5>
                                 </div>
                             </div>
                         @endforeach

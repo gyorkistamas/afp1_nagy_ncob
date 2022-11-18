@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use App\Models\Game;
-use Illuminate\Contracts\Cache\Store;
-use Illuminate\Contracts\Session\Session;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Contracts\Session\Session;
 
 class UserController extends Controller
 {
@@ -67,6 +67,7 @@ class UserController extends Controller
         if (auth()->attempt($formFields)) {
 
             if ($isBanned) {
+                $request->session()->invalidate();
                 return back()->withErrors(['email' => 'Ez a felhasználó kitiltásra került korábban!'])->onlyInput('email');
             }
             else {
@@ -93,8 +94,16 @@ class UserController extends Controller
     public function view($userID) {
 
         $User = User::findOrFail($userID);
-        $GamesPlayedByUser = Game::where('player', $userID)->orderByDesc('id')->paginate(3);
+        // $GamesPlayedByUser = Game::where('player', $userID)->orderByDesc('id')->paginate(3);
 
+        $GamesPlayedByUser = Game::select('games.created_at', 'games.player', 'game_puzzles.hit')
+                                    ->join('game_puzzles', 'games.id', '=', 'game_puzzles.game_id')
+                                    ->where('games.player', $userID)
+                                    ->orderByDesc('games.created_at')
+                                    ->paginate(3);
+
+
+        //dd($GamesPlayedByUser);
         return view('users.view', [
             'User' => $User,
             'GamesPlayedByUser' => $GamesPlayedByUser
