@@ -83,6 +83,7 @@ class GameController extends Controller
 						->join('puzzles', 'puzzle_id', '=', 'puzzles.id')
 						->join('games', 'game_id', '=', 'games.id')
 						->join('users', 'player', '=', 'users.id')
+						->select('users.username', 'games.created_at', 'game_puzzles.hit', 'puzzles.answer', 'puzzles.picture')
 						->where('game_id', $id)->get();
 		$c = count(DB::table('game_puzzles')->where('game_id', $id)->where('hit', '!=', 0)->get());
 		return view('game/results', ['puzzles' => $puzzles, 'hits' => $c ]);
