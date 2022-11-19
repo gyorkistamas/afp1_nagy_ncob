@@ -37,7 +37,7 @@
 			</div>
 			<div class="col-4">
 				<div class="col-12 float-right">
-					<a href="" class="btn btn-success col-12 mb-4">Profil</a>
+					<a href="/users/{{ $user->id }}/view" class="btn btn-success col-12 mb-4">Profil</a>
 					<div class="d-flex justify-content-between mb-2">
 						<div class="d-inline-block">
 							<h4 class="d-inline">admin?</h4>

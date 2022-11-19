@@ -58,7 +58,7 @@
 				<h3>Hány kérdés szerepeljen:</h3>
 				<input id=game_len
 						name=game_len
-						class="d-inline-block"
+						class="d-inline-block form-control w-25"
 						type=number
 						min=1 value=10
 						placeholder=10
