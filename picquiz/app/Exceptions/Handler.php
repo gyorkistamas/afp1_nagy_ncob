@@ -52,7 +52,7 @@ class Handler extends ExceptionHandler
 
 
         $this->renderable(function (PostTooLargeException $e) {
-            return redirect()->route('editerror');
+            return redirect()->route('postError');
         });
 
         $this->renderable(function (QueryException $e) {

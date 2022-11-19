@@ -40,7 +40,6 @@ Route::get('/logout', [UserController::class, 'logout']);
 //----------------- User routes ---------------------
 Route::get('/users/{userID}/view', [UserController::class, 'view'])->middleware('auth');
 Route::get('/users/edit', [UserController::class, 'edit'])->middleware('auth');
-Route::get('/users/edit/error', [UserController::class, 'editError'])->middleware('auth')->name('editerror');
 Route::post('/users/update', [UserController::class, 'update'])->middleware('auth');
 
 
@@ -84,3 +83,7 @@ Route::get('/UserList', function() {return view('users/list'); } );
 Route::post('/toggleBan', [UserController::class, 'user_list_toggle'] );
 
 Route::post('/toggleAdmin', [UserController::class, 'user_list_toggle'] );
+
+
+//--------- Error routes --------------------------------------------
+Route::get('/posttoobig', function() {return view('errors.postTooLarge'); })->name('postError');
