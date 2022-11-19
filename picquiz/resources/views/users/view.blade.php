@@ -35,15 +35,15 @@
 
             <div class="d-flex justify-content-between text-center mt-5 mb-2">
               <div>
-                <p class="mb-2 h5">{{ $User->numberOfGames }}</p>
+                <p class="mb-2 h5">{{ $User->numberOfGames == 0 ? 0 : $User->numberOfGames }}</p>
                 <p class="text-white mb-0">Játszmák száma</p>
               </div>
               <div class="px-3">
-                <p class="mb-2 h5">{{ $User->numberOfHits }}</p>
+                <p class="mb-2 h5">{{ !$User->numberOfHits ? 0 : $User->numberOfHits }}</p>
                 <p class="text-white mb-0">Eltalált feladványok</p>
               </div>
               <div>
-                <p class="mb-2 h5"> {{ $User->hitRatio }} %</p>
+                <p class="mb-2 h5"> {{ !$User->hitRatio ? 0 : $User->hitRatio }} %</p>
                 <p class="text-white mb-0">Találati arány</p>
               </div>
             </div>

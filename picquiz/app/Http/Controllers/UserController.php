@@ -113,8 +113,8 @@ class UserController extends Controller
                                         round((sum(game_puzzles.hit) / count(game_puzzles.hit)) * 100, 2) as hitRatio'
                                 )
                             )
-                        ->join('games', 'users.id', '=', 'games.player')
-                        ->join('game_puzzles', 'games.id', '=', 'game_puzzles.game_id')
+                        ->leftjoin('games', 'users.id', '=', 'games.player')
+                        ->leftjoin('game_puzzles', 'games.id', '=', 'game_puzzles.game_id')
                         ->where('users.id', $userID)
                         ->groupBy('users.id', 'users.username', 'users.email', 'users.profile_picture', 'users.isAdmin', 'users.created_at')
                         ->get();
