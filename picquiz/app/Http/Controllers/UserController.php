@@ -6,6 +6,7 @@ use App\Models\Game;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Contracts\Cache\Store;
@@ -94,13 +95,23 @@ class UserController extends Controller
     public function view($userID) {
 
         $User = User::findOrFail($userID);
-        // $GamesPlayedByUser = Game::where('player', $userID)->orderByDesc('id')->paginate(3);
 
-        $GamesPlayedByUser = Game::select('games.created_at', 'games.player', 'game_puzzles.hit')
+        // SELECT games.created_at, Count(game_puzzles.hit)
+        // FROM games
+        // INNER JOIN game_puzzles
+        // ON games.id = game_puzzles.game_id
+        // WHERE games.player = 1 AND game_puzzles.hit > 0
+        // GROUP BY games.created_at
+        // ORDER BY games.created_at DESC;
+
+        $GamesPlayedByUser = Game::select('games.created_at', DB::raw('sum(game_puzzles.hit) as hitcount'))
                                     ->join('game_puzzles', 'games.id', '=', 'game_puzzles.game_id')
                                     ->where('games.player', $userID)
+                                    ->where('game_puzzles.hit', '>=', 0)
+                                    ->groupBy('games.created_at')
                                     ->orderByDesc('games.created_at')
-                                    ->paginate(3);
+                                    ->take(3)
+                                    ->get();
 
 
         //dd($GamesPlayedByUser);
