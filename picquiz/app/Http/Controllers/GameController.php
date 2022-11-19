@@ -104,6 +104,10 @@ class GameController extends Controller
       return view('game.puzzleList', ['Puzzles' => $listOfPuzzles]);
 
     }
+
+	public function create() {
+		return view('game.newPuzzle');
+	}
 }
 
 ?>

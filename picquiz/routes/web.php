@@ -73,6 +73,8 @@ Route::get('/results/{id}', [GameController::class, 'summarize']);
 
 Route::get('/games/list', [GameController::class, 'list'])->middleware('admin');
 
+Route::get('/games/new', [GameController::class, 'create'])->middleware('admin');
+
 //--------- Admin routes --------------------------------------------
 
 //Route::get('/UserDoList', [UserListController::class, 'do_list']);
