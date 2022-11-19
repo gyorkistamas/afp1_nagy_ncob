@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Game;
 use App\Models\User;
+use App\Models\Puzzle;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\DB;
@@ -94,7 +95,31 @@ class UserController extends Controller
     //View User:
     public function view($userID) {
 
-        $User = User::findOrFail($userID);
+        // SELECT users.username, users.email, users.profile_picture, users.isAdmin, users.created_at,
+        // COUNT(DISTINCT games.created_at) as "NumberOfGames",
+        // SUM(game_puzzles.hit) as "NumberOfHits",
+        // ROUND((SUM(game_puzzles.hit) / COUNT(game_puzzles.hit)) * 100, 2) as 'HitRatio'
+        // FROM users
+        // INNER JOIN games ON users.id = games.player
+        // INNER JOIN game_puzzles ON games.id = game_puzzles.game_id
+        // WHERE users.id = 2
+        // GROUP BY users.id;
+
+        $User = User::select(
+                                'users.id', 'users.username', 'users.email', 'users.profile_picture',
+                                'users.isAdmin', 'users.created_at',
+                                DB::raw('count(games.created_at) as numberOfGames,
+                                        sum(game_puzzles.hit) as numberOfHits,
+                                        round((sum(game_puzzles.hit) / count(game_puzzles.hit)) * 100, 2) as hitRatio'
+                                )
+                            )
+                        ->join('games', 'users.id', '=', 'games.player')
+                        ->join('game_puzzles', 'games.id', '=', 'game_puzzles.game_id')
+                        ->where('users.id', $userID)
+                        ->groupBy('users.id', 'users.username', 'users.email', 'users.profile_picture', 'users.isAdmin', 'users.created_at')
+                        ->get();
+
+        //dd($User);
 
         // SELECT games.created_at, Count(game_puzzles.hit)
         // FROM games
@@ -116,7 +141,7 @@ class UserController extends Controller
 
         //dd($GamesPlayedByUser);
         return view('users.view', [
-            'User' => $User,
+            'User' => $User[0],
             'GamesPlayedByUser' => $GamesPlayedByUser
         ]);
     }

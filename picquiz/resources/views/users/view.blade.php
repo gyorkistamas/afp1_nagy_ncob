@@ -43,7 +43,7 @@
                 <p class="text-white mb-0">Eltalált feladványok</p>
               </div>
               <div>
-                <p class="mb-2 h5">{{ $User->numberOfGames == 0 ? 0 : ($User->numberOfHits / $User->numberOfGames) * 100 }} %</p>
+                <p class="mb-2 h5"> {{ $User->hitRatio }} %</p>
                 <p class="text-white mb-0">Találati arány</p>
               </div>
             </div>
