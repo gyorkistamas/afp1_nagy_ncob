@@ -115,14 +115,14 @@ class GameController extends Controller
 			'answer' => ['required', 'min:3']
 		]);
 
-		$formdata['picture'] = $req->file('picture')->store('images/uploads/puzzles', 'public');
+		$formdata['picture'] = $req->file('picture')->store('images/uploads/uploaded_puzzles', 'public');
 		$formdata['answer'] = GameController::to_answer_format($formdata['answer']);
 
 		$formdata['user_added'] = Auth::User()->id;
 
 		$game = Puzzle::create($formdata);
 
-		return view('game.newPuzzle')->with('Feladvány sikeresen létrehozva!');
+		return redirect('/games/new')->with('message', 'Feladvány sikeresen létrehozva!');
 	}
 
 }
