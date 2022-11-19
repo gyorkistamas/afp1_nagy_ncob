@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('picture');
             $table->string('answer');
             $table->unsignedBigInteger('user_added');
-            $table->integer('numberOfGames');
-            $table->integer('numberOfHits');
+            $table->integer('numberOfGames')->default(0);
+            $table->integer('numberOfHits')->default(0);
             $table->foreign('user_added')->references('id')->on('users');
         });
     }
