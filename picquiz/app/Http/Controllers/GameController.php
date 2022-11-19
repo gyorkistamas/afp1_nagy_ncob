@@ -116,6 +116,7 @@ class GameController extends Controller
 		]);
 
 		$formdata['picture'] = $req->file('picture')->store('images/uploads/uploaded_puzzles', 'public');
+		$formdata['picture'] = '/storage/' . $formdata['picture'];
 		$formdata['answer'] = GameController::to_answer_format($formdata['answer']);
 
 		$formdata['user_added'] = Auth::User()->id;
