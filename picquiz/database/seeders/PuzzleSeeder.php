@@ -25,7 +25,7 @@ class PuzzleSeeder extends Seeder
 
 		Puzzle::create([
 			'picture' => "/images/puzzles/batllefield_1.jpg",
-			'answer' => "batllefield 1",
+			'answer' => "battlefield 1",
 			'user_added' => 1,
 			'numberOfGames' => 0,
 			'numberOfHits' => 0,
@@ -129,7 +129,7 @@ class PuzzleSeeder extends Seeder
 
 		Puzzle::create([
 			'picture' => "/images/puzzles/farcry_4.jpg",
-			'answer' => "farcry 4",
+			'answer' => "far cry 4",
 			'user_added' => 1,
 			'numberOfGames' => 0,
 			'numberOfHits' => 0,
@@ -225,7 +225,7 @@ class PuzzleSeeder extends Seeder
 
 		Puzzle::create([
 			'picture' => "/images/puzzles/rainbow_6_siege.jpg",
-			'answer' => "rainbow 6 siege",
+			'answer' => "rainbow six siege",
 			'user_added' => 1,
 			'numberOfGames' => 0,
 			'numberOfHits' => 0,
@@ -273,7 +273,7 @@ class PuzzleSeeder extends Seeder
 
 		Puzzle::create([
 			'picture' => "/images/puzzles/Titan_fall.jpg",
-			'answer' => "titan fall",
+			'answer' => "titanfall",
 			'user_added' => 1,
 			'numberOfGames' => 0,
 			'numberOfHits' => 0,
