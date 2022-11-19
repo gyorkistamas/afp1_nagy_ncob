@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Puzzle extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'picture',
+        'answer',
+        'user_added'
+    ];
 }
