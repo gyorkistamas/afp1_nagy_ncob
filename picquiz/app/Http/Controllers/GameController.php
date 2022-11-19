@@ -108,6 +108,23 @@ class GameController extends Controller
 	public function create() {
 		return view('game.newPuzzle');
 	}
+
+	public function store(Request $req) {
+		$formdata = $req->validate([
+			'picture' => ['required'],
+			'answer' => ['required', 'min:3']
+		]);
+
+		$formdata['picture'] = $req->file('picture')->store('images/uploads/puzzles', 'public');
+		$formdata['answer'] = GameController::to_answer_format($formdata['answer']);
+
+		$formdata['user_added'] = Auth::User()->id;
+
+		$game = Game::create($formdata);
+
+		return view('game.newPuzzle')->with('Feladvány sikeresen létrehozva!');
+	}
+
 }
 
 ?>
