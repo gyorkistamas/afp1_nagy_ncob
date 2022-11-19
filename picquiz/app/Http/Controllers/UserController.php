@@ -105,6 +105,8 @@ class UserController extends Controller
         // WHERE users.id = 2
         // GROUP BY users.id;
 
+        User::findOrFail($userID);
+
         $User = User::select(
                                 'users.id', 'users.username', 'users.email', 'users.profile_picture',
                                 'users.isAdmin', 'users.created_at',
