@@ -74,6 +74,7 @@ Route::get('/results/{id}', [GameController::class, 'summarize']);
 Route::get('/games/list', [GameController::class, 'list'])->middleware('admin');
 
 Route::get('/games/new', [GameController::class, 'create'])->middleware('admin');
+Route::post('games/new', [GameController::class, 'store'])->middleware('admin');
 
 //--------- Admin routes --------------------------------------------
 
