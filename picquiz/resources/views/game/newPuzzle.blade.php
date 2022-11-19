@@ -31,7 +31,7 @@
 			<div class="row">
 				<div class="col-12 col-md-6">
 					<label class="form-label" for="picture">Feladvány képe:</label>
-					<input type="file" name="picture" id="picture" class="form-control" value="{{ old('picture') }}" required>
+					<input type="file" name="picture" id="picture" class="form-control" value="{{ old('picture') }}" accept="image/*" required>
 					@error('picture')
                         <p class="text-danger text-xs mt-1">{{$message}}</p>
                     @enderror
