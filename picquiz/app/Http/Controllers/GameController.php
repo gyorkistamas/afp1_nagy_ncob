@@ -120,7 +120,7 @@ class GameController extends Controller
 
 		$formdata['user_added'] = Auth::User()->id;
 
-		$game = Game::create($formdata);
+		$game = Puzzle::create($formdata);
 
 		return view('game.newPuzzle')->with('Feladvány sikeresen létrehozva!');
 	}
