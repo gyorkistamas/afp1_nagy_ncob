@@ -174,7 +174,7 @@ class UserController extends Controller
             $email = $request->validate([
                 'email' => [Rule::unique('users', 'email')]
             ]);
-            $formFields['email'] = $email;
+            $formFields['email'] = $email['email'];
         }
 
 
