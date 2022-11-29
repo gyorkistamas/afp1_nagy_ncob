@@ -91,18 +91,22 @@ class GameController extends Controller
 
     public function list() {
 
-      $listOfPuzzles = Puzzle::select('puzzles.id',
-                                    'puzzles.created_at',
-                                    'puzzles.updated_at',
-                                    'puzzles.picture',
-                                    'puzzles.answer',
-                                    'puzzles.numberOfHits',
-                                    'puzzles.numberOfGames',
-                                    'users.username')
-                                ->join('users', 'users.id', '=', 'puzzles.user_added')
-                                ->paginate(6);
+		$listOfPuzzles = Puzzle::select(
+			'puzzles.id',
+			'puzzles.created_at',
+			'puzzles.picture',
+			'puzzles.answer',
+			'users.username',
+			DB::raw('sum(game_puzzles.hit) as "numberOfHits"'),
+			DB::raw('count(game_puzzles.game_id) as "numberOfGames"'),
+			DB::raw('ROUND( ( SUM(game_puzzles.hit) / COUNT(game_puzzles.game_id) ) * 100, 2 ) as "hitRatio"'))
+		->leftjoin('users', 'users.id', '=', 'puzzles.user_added')
+		->leftjoin('game_puzzles', 'game_puzzles.puzzle_id', '=', 'puzzles.id')
+		->groupBy('puzzles.id', 'puzzles.created_at', 'puzzles.picture', 'puzzles.answer', 'users.username')
+		->paginate(6);
 
-      return view('game.puzzleList', ['Puzzles' => $listOfPuzzles]);
+        //dd($listOfPuzzles);
+        return view('game.puzzleList', ['Puzzles' => $listOfPuzzles]);
 
     }
 
