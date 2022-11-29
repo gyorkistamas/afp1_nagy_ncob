@@ -99,7 +99,7 @@ class GameController extends Controller
 			'users.username',
 			DB::raw('sum(game_puzzles.hit) as "numberOfHits"'),
 			DB::raw('count(game_puzzles.game_id) as "numberOfGames"'),
-			DB::raw('ROUND( ( SUM(game_puzzles.hit) / COUNT(game_puzzles.game_id) ) * 100, 2 ) as "hitRatio"'))
+			DB::raw('round( ( SUM(game_puzzles.hit) / COUNT(game_puzzles.game_id) ) * 100, 2 ) as "hitRatio"'))
 		->leftjoin('users', 'users.id', '=', 'puzzles.user_added')
 		->leftjoin('game_puzzles', 'game_puzzles.puzzle_id', '=', 'puzzles.id')
 		->groupBy('puzzles.id', 'puzzles.created_at', 'puzzles.picture', 'puzzles.answer', 'users.username')
