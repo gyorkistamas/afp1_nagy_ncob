@@ -56,7 +56,44 @@ A projektre 3 hónap áll rendelkezésre.
 
 ## 8. Képernyőtervek
 
-![képnév](gitlink ahol a kép van)
+Főoldal
+![Főoldal](../Dokumentáció/Képernyőtervek/Főoldal.png)
+
+Regisztráció
+![Regisztráció](../Dokumentáció/Képernyőtervek/RegisztrációEgyben.jpg)
+
+Bejelentkezés
+![Bejelentkezés](../Dokumentáció/Képernyőtervek/Bejelentkezés.png)
+
+Felhasználók megtekintése
+![Felhasználók megtekintése](../Dokumentáció/Képernyőtervek/FelhasználókMegtekintése.png)
+
+Profil megtekintése
+![Profil megtekintése](../Dokumentáció/Képernyőtervek/ProfilMegtekintése.png)
+
+Profil szerkesztése
+![Profil szerkesztése](../Dokumentáció/Képernyőtervek/ProfilSzerkesztése.png)
+
+Feladványok
+![Feladványok](../Dokumentáció/Képernyőtervek/Feladványok.png)
+
+Új feladvány
+![Új feladvány](../Dokumentáció/Képernyőtervek/ÚjFeladvány.png)
+
+Új játék
+![Új játék](../Dokumentáció/Képernyőtervek/ÚjJáték.png)
+
+Folyamatban lévő játék
+![Folyamatban lévő játék](../Dokumentáció/Képernyőtervek/FolyamatbanlévőJáték.jpg)
+
+Játék eredménye
+![Játék eredménye](../Dokumentáció/Képernyőtervek/JátékEredménye.jpg)
+
+Új visszajelzés
+![Új visszajelzés](../Dokumentáció/Képernyőtervek/ÚjVisszajelzés.png)
+
+Visszajelzések megtekintése
+![Visszajelzések megtekintése](../Dokumentáció/Képernyőtervek/VisszajelzésekMegtekintése.png)
 
 ## 9. Forgatókönyvek
 1. Regisztráció
