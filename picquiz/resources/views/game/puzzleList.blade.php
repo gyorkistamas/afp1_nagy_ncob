@@ -21,10 +21,10 @@
                     <div class="card-body">
                     <h5 class="card-title text-center">Megfejtés: {{ Str::upper($puzzle->answer) }}</h5>
                     <p class="card-text font-weight-bold">Feltöltötte: {{ $puzzle->username }}</p>
-                    <p class="card-text font-weight-bold">Találatok száma: {{ $puzzle->numberOfHits }}</p>
-                    <p class="card-text font-weight-bold">Játszmák száma: {{ $puzzle->numberOfGames }}</p>
-                    <p class="card-text font-weight-bold">Találati arány: {{ $puzzle->numberOfGames == 0 ? 0 : ($puzzle->numberOfHits / $puzzle->numberOfGames) * 100 }} %</p>
-                    </div>
+                    <p class="card-text font-weight-bold">Találatok száma: {{ $puzzle->numberOfHits == 0 ? 0 : $puzzle->numberOfHits }}</p>
+                    <p class="card-text font-weight-bold">Játszmák száma: {{ $puzzle->numberOfGames == 0 ? 0 : $puzzle->numberOfGames }}</p>
+                    <p class="card-text font-weight-bold">Találati arány: {{ $puzzle->hitRatio == 0 ? 0 : $puzzle->hitRatio }} %</p>
+                </div>
                 </div>
             @endforeach
 
