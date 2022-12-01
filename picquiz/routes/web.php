@@ -78,11 +78,11 @@ Route::post('games/new', [GameController::class, 'store'])->middleware('admin');
 //--------- Admin routes --------------------------------------------
 
 //Route::get('/UserDoList', [UserListController::class, 'do_list']);
-Route::get('/UserList', function() {return view('users/list'); } );
+Route::get('/UserList', function() {return view('users/list'); } )->middleware('admin');
 
-Route::post('/toggleBan', [UserController::class, 'user_list_toggle'] );
+Route::post('/toggleBan', [UserController::class, 'user_list_toggle'] )->middleware('admin');
 
-Route::post('/toggleAdmin', [UserController::class, 'user_list_toggle'] );
+Route::post('/toggleAdmin', [UserController::class, 'user_list_toggle'] )->middleware('admin');
 
 
 //--------- Error routes --------------------------------------------
