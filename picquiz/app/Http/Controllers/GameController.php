@@ -61,7 +61,7 @@ class GameController extends Controller
 	}
 
 	private function to_answer_format($str){
-		$str = str_replace(['_', ':', ',', '.', '?', '!'], [' '], strtolower($str));
+		$str = str_replace(['_', ':', ',', '.', '?', '!', ' '], [''], strtolower($str));
 		return $str;
 	}
 
