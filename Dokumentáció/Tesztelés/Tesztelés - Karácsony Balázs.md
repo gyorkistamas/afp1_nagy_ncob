@@ -26,4 +26,17 @@ A tesztek három nagy csoportra lesznek osztva utalva a projekt verziójára (Al
 
 ## Béta teszt:
 
+| Teszt Azonosító | Vizsgálat | Időpont | Elvárt eredmény | Tényleges eredmény | Megjegyzés
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| KB_t011 | Új feladvány hozzáadása I. | 2022.12.01 | Adatok megadása nélküli feladvány hozzáadásakor dobjon hibát, vagy figyelmeztessen az oldal a hiányzó input mezőkkel kapcsolatban. | Az oldal figyelmeztet a hiányos input mezőkről. | Nem találtam problémát. |
+| KB_t012 | Új feladvány hozzáadása II. | 2022.12.01 | Adatok megfelelő megadásakor kerüljön fel az oldalra a feladvány. | A feladvány feltöltése megtörténik, az oldal egy zöld üzenettel értesít erről. | Nem volt hiba a tesztelés során. |
+| KB_t013 | Feladványok kilistázása | 2022.12.01 | 3 feladvány legyen soronként, oldalonként 2 sor, működjön a lapozás. | Az történik ami elvárt lenne, csak feladványok adatai hibásan kerülnek fel. | Hibát találtam. |
+| KB_t014 | Felhasználók kezelése I. | 2022.12.01 | Csak adminok tudják elérni a Felhasználók kezeléséhez tartozó oldalt. | Közönséges felhasználóként is hozzá tudok férni az oldalhoz, ha beírom az elérési az oldal útvonalát. | Hibát találtam. |
+| KB_t015 | Felhasználók kezelése II. | 2022.12.01 | Adminként ha kitiltok egy felhasználót, akkor ő ne legyen képes bejelentkezni, figyelmeztesse az oldal, hogy kitiltásra került. | Ha be akarok jelentkezni egy már kitiltott felhasználóval, akkor az oldal figyelmeztet, hogy kitiltásra került és nem történik meg a beléptetés. | A tesztelés probléma mentesen zárult. |
+| KB_t016 | Felhasználók kezelése III. | 2022.12.01 | Adminként ha feloldom a kitiltást egy felhasználóról, akkor ő legyen képes újra hozzáférni az oldal többi részéhez. | Elvárt eredménnyel megegyezik. Újra be tudok jelentkezni. | Nem találtam problémát. |
+| KB_t017 | Felhasználók kezelése IV. | 2022.12.01 | Ha egy felhasználót kinevezek adminnak, akkor ő is képes legyen hozzáférni a Felhasználók kezelése oldalhoz, képes legyen kitiltani másokat és kinevezni adminra. | Az elvárt eredménynél taglaltakkal egyenlő. | Nem volt hiba. |
+| KB_t018 | Játék | 2022.12.01 | A megadott mennyiségnek megfelelő feladvány kövesse egymást, ha végére értünk legyen róla statisztika. | Elvárt eredménnyel megegyezik. | Probléma mentes volt a tesztelés. |
+| KB_t019 | Felhasználók kezelése V. | 2022.12.01 | Admin felhasználó ne tudja saját magát kitiltani. | A jelenlegi felhasználónál nem jelennek meg olyan opciók | Nem volt probléma.
+| KB_t020 | Felhasználók kezelése VI. | 2022.12.01 | Admin felhasználó ne tudja saját magát lefokozni. | Ugyanaz mint az elvárt eredménynél. | Nem volt hiba. |
+
 ## Végleges: 
