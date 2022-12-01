@@ -153,7 +153,7 @@ class PuzzleSeeder extends Seeder
 
 		Puzzle::create([
 			'picture' => "/images/puzzles/gta_v.jpg",
-			'answer' => "gta v",
+			'answer' => "grand theft auto v",
 			'user_added' => 1,
 			'numberOfGames' => 0,
 			'numberOfHits' => 0,
@@ -193,7 +193,7 @@ class PuzzleSeeder extends Seeder
 
 		Puzzle::create([
 			'picture' => "/images/puzzles/oblivion.png",
-			'answer' => "oblivion",
+			'answer' => "the elder scrolls iv oblivion",
 			'user_added' => 1,
 			'numberOfGames' => 0,
 			'numberOfHits' => 0,
