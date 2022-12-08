@@ -27,7 +27,7 @@ PHP, HTML, CSS, JavaScript használatával, Laravel keretrendszerben webalkalmaz
 | Program |Képernyőtervek elkészítése | 2 | 1 | 1 | 1 | 1 |
 | Program |Prototípus elkészítése | 3 | 10 | 10 | 15 | 10 |
 | Program |Alapfunkciók elkészítése | 3 | 10 | 10 | 15 | 10 |
-| Program |Tesztelés | 4 | 3 | 3 | - | 3 |
+| Program |Tesztelés | 4 | 3 | 3 | 5 | 3 |
 
 ### 2.4 Mérföldkövek:
 - Feladatok elosztása
